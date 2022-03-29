@@ -1,0 +1,473 @@
+// ion-header,
+// ion-toolbar {
+//   //--background: #D0DEEB;
+// }
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+ion-card{
+  box-shadow: none;
+}
+
+ion-icon {
+    font-weight: bold;
+    margin-left: 40px;
+    font-size: 20px;
+    display: block;
+}
+
+ion-textarea {
+  font-weight: normal;
+  color: var(--black-gray);
+  font-size: 14px;
+
+  ion-input {
+    font-weight: normal;
+    color: var(--black-gray);
+    font-size: 14px;
+  }
+}
+
+ion-input {
+  font-weight: normal;
+  color: var(--black-gray);
+  font-size: 14px;
+}
+
+ion-segment {
+  margin-top: 0%;
+}
+
+p {
+  font-weight: normal;
+  color: var(--black-gray);
+  font-size: 13px;
+}
+
+.back {
+  color: var(--black-gray) !important;
+  font-weight: bold;
+  margin-left: 15px;
+  font-size: 20px;
+}
+.add {
+  color: #ffffff !important;
+  font-weight: bold;
+  margin-left: 15px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+ion-label {
+  padding: 0px 0;   
+}
+
+.h2{
+    font-family: 'Poppins', sans-serif;
+    color: gray;
+    font-weight: lighter;
+    margin-top: 50%;
+    font-size: 15px;
+    text-align: left;
+    margin-left: -240%;
+}
+
+.h1{
+    font-family: 'Poppins', sans-serif;
+    color: var(--blue-green-dark);
+    font-weight: bold;
+    margin-top: 50%;
+    font-size: 15px;
+    text-align: left;
+    margin-left: -240%;   
+}
+
+.icon-violet{
+    color: gray;
+    font-size: 20px;
+    margin-left: 5px;
+    width: 100px;
+    height: 100px;
+}
+
+.container{
+    --background-color: #D0DEEB  !important;
+    padding: 0;
+    margin: 14px 0;
+    border-radius: 0px;
+    color: #D0DEEB;
+    font-weight: 600;
+}
+
+//For Cards
+
+ion-badge{
+  margin-left: 2%;
+}
+
+.text-icon{
+  color: #003C77;
+  white-space: initial;
+  margin-left: 1%;
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.green-badge {
+  color: #2b9e4e;
+  background: #4ae779;
+  font-family: 'Poppins', sans-serif;
+  width: 20%;
+  height: 20%;
+}
+
+.red-badge {
+  color: #bb1b30;
+  background: #f07485;
+  font-family: 'Poppins', sans-serif;
+  width: 20%;
+  height: 20%;
+}
+
+.icon-img{
+  border-radius: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  height: 50%;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+.header-job {
+  font-weight: 550;
+  font-size: 20px;
+  margin-top: -10px;
+  color: var(--black-gray);
+  padding: 0;
+  text-align: center;
+  white-space: initial;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+h6 {
+  font-weight: 400;
+  text-align: center;
+  font-size: 13px;
+  color: gray;
+  white-space: initial;
+  font-family: 'Poppins', sans-serif;
+  padding: 0;
+  margin-top: -10px;
+}
+
+h3 {
+  font-weight: 400;
+  font-size: 15px;
+  margin-left: -30%;
+  color: gray;
+  white-space: initial;
+  font-family: 'Poppins', sans-serif;
+}
+
+.small-icon {
+  font-weight: 400;
+  font-size: 15px;
+  margin-left: -90%;
+  color: gray;
+  white-space: initial;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.icon-small{
+  color: gray;
+  font-size: 20px;
+  margin-left: 2px;
+  width: 18px;
+  height: 18px;
+  // margin-top: 20px;
+}
+
+// For Segments 
+
+ion-label{
+  color:#003C77;
+  font-weight: 700;
+}
+
+ion-card-subtitle{
+  font-family: 'Poppins', sans-serif;
+  color: rgb(80, 79, 79);
+  font-weight: bolder;
+  font-size: 15px;
+}
+
+ion-item {
+  background: none;
+  padding: 0;
+  margin: 13px 0;
+  border-radius: 10px;
+  color: #000000;
+  font-weight: 600;
+  background: var(--white);
+  border: 2px solid var(--dark-blue);
+}
+
+.list-history {
+  background: none;
+  padding: 0;
+  margin: 13px 0;
+  color: #000000;
+  border: none;
+}
+
+.label{
+  font-family: 'Poppins', sans-serif;
+  color: rgb(80, 79, 79);
+  font-weight: bold;
+  font-size: 13px; 
+}
+
+// For Buttons
+
+ion-button {
+  box-shadow: none !important;
+  border-style: none;
+  border-style: none;
+  border-radius: 0%;
+  width: 45%;
+  display: inline-block;
+}
+.upload {
+  box-shadow: none !important;
+  border-style: none;
+  border-style: none;
+  border-radius: 0%;
+  width: 47%;
+  margin-left: 10%;
+}
+
+.btnstart{
+  font-family: 'Poppins';
+  color: #ffffff;
+  font-weight: 700;
+  --background: #30B2EA;
+  border-radius: 20px;
+  margin-right: 2%;
+  font-size: 12px;
+}
+
+.btncom{
+  font-family: 'Poppins';
+  color: #ffffff;
+  font-weight: 700;
+  --background: #000000;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+section {
+  margin-left: 0.6em;
+}
+
+section:not(.full-width),
+.full-width > header {
+  padding: 0 10px;
+}
+
+// For Labels
+h5 {
+  text-align: center;
+  line-height: 1.4em;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.row-labels {
+  margin-left: 5px;
+}
+
+//Responsivenes of Image
+@media(max-width: 991px) {
+  .icon-img {
+    border-radius: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    height: 30%;
+  }
+}
+
+@media(max-width: 767px) {
+  .icon-img {
+    border-radius: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    height: 30%;
+  }
+}
+
+@media(max-width: 500px) {
+  .icon-img {
+    border-radius: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    height: 30%;
+  }
+}
+
+
+
+//Photo tab
+
+.remarks {
+  background: none;
+  padding: 0;
+  margin: 14px 0;
+  border-radius: 10px;
+  color: #000000;
+  font-weight: 600;
+  background: var(--white);
+  border: 2px solid var(--dark-blue);
+} 
+h4 {
+  font-weight: 600;
+  font-size: 12px;
+  margin-left: 10px;
+  color: var(--dark-blue);
+  white-space: initial;
+}
+h6, h3 {
+  color: var(--black-gray);
+  margin-left: 10px;
+}
+
+//history
+.list-history {
+  background: none;
+  padding: 0;
+  margin: 13px 0;
+  color: #000000;
+  border: none;
+  border-bottom: var(--black-gray) !important;
+}
+
+.history-content{
+  margin-left: 0;
+}
+
+.icon-history {
+  color: var(--black-gray) !important;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.header-title {
+  font-weight: 550;
+  font-size: 18px;
+  color: var(--black-gray);
+  padding: 0;
+  text-align: left;
+  margin-left: -3px;
+  white-space: initial;
+  font-family: 'Poppins', sans-serif;
+}
+
+.purple-badge {
+  color: #bb1b30;
+  background: #f07485;
+  font-family: 'Poppins', sans-serif;
+  width: 40%;
+  height: 20%;
+}
+
+
+//CHECKLIST
+.add{
+  --color: var(--black-gray);
+    font-weight: bold;
+    
+    font-size: 20px;
+}
+
+//HISTORY
+.card-jeep {
+  margin: 30px 20px 0px 20px;
+  padding: 8px;
+  border-radius: 20px;
+  background: #ecfffd;
+}
+
+.btn-history {
+  --background: var(--dark-blue);
+  --border-width: 50% !important;
+  width: 90%;
+  font-style: normal;
+  color: var(--white);
+  font-family: var(--body-font);
+  font-weight: bold;
+  text-align: center;
+  margin: auto;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+ion-card-title {
+  color: var(--white);
+}
+
+.title-checklist{
+  color: var(--black-gray);
+}
+
+.offer-bg{
+  background-color: var(--dark-blue);
+  margin-left: 0%;
+  margin-right: 0%;
+  border-radius: 15px;
+}
+
+.offer-content{
+  margin-top: 4%;
+}
+
+.ion-card-offer {
+  margin: 25px 0px 5px 0px;
+  padding: 5px;
+  border-radius: 15px;
+  background-color: var(--light-gray);
+  border: 2px solid var(--dark-blue);
+}
+
+.badge-history {
+  font-family: 'Poppins', sans-serif;
+  font-weight: normal;
+}
+
+.p-history {
+  font-size: medium;
+}
+
+ion-list-header {
+  font-weight: bold;
+  font-size: 17px;
+  color: var(--black-gray);
+}
+
+
+canvas {
+  display: block;
+  box-shadow: 0 0 5px 1px #999;
+  margin: 2em auto;
+}
+

@@ -1,0 +1,413 @@
+<ion-header>
+  <ion-toolbar>
+    <div class="container">
+      <ion-buttons slot="start">
+        <ion-icon class="back" name="chevron-back" (click)="dismiss()" defaultHref></ion-icon>
+      </ion-buttons>
+      <!-- <div>
+        <img class="icon-img" src="https://material.angular.io/assets/img/examples/shiba1.jpg">
+      </div> -->
+
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-label>
+              <h4 class="header-job">JOB #32  
+                <ion-badge class="green-badge">SENT</ion-badge>
+                <ion-badge class="red-badge">HIGH</ion-badge>
+              </h4>
+            </ion-label>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <div>
+        <h6>Started: — Ended: —</h6>
+      </div>
+
+      <ion-grid>
+        <ion-row class="ion-align-items-center">
+          <ion-col class="row-labels">
+            <ion-label>
+              <ion-icon name="location"></ion-icon><h5>Resorts World Manila</h5>
+            </ion-label>
+          </ion-col>
+          <ion-col>
+            <ion-label>
+              <ion-icon name="briefcase"></ion-icon><h5>Preventive Maintenance</h5>
+            </ion-label>
+          </ion-col>
+          <ion-col>
+            <ion-label>
+              <ion-icon name="checkbox"></ion-icon><h5>Coffee Machinery</h5>
+            </ion-label>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      
+      <section no-padding>
+        <ion-button class="btnstart">Start Job</ion-button>
+        <ion-button class="btncom">Mark as Complete</ion-button>
+      </section>   
+    </div>
+  </ion-toolbar>  
+  
+  <ion-toolbar>
+  <!--CONTENT SEGMENT-->
+  <ion-segment 
+  value="summary" 
+  scrollable="true"
+  color="tertiary"
+  [(ngModel)]="segmentModel" 
+  (ionChange)="segmentChanged($event)">
+
+    <ion-segment-button value="summary">
+      <ion-label>Summary</ion-label>
+    </ion-segment-button>
+
+    <ion-segment-button value="tech">
+      <ion-label>Tech Comments</ion-label>
+    </ion-segment-button>
+
+    <ion-segment-button value="photo">
+      <ion-label>Photo</ion-label>
+    </ion-segment-button>
+
+    <ion-segment-button value="checklist">
+      <ion-label>Checklist</ion-label>
+    </ion-segment-button>
+
+    <ion-segment-button value="just">
+      <ion-label>Customer</ion-label>
+    </ion-segment-button>
+
+    <ion-segment-button value="onemore">
+      <ion-label>History</ion-label>
+    </ion-segment-button>
+
+    <!-- <ion-segment-button value="tofill">
+      <ion-label>To Fill</ion-label>
+    </ion-segment-button> -->
+  </ion-segment>
+</ion-toolbar>
+</ion-header>
+<div>
+</div>
+  
+ <!-- SUMMARY TAB -->
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-card *ngIf="segmentModel === 'summary'">
+    <ion-card-header>
+      <ion-card-subtitle>Job Summary:</ion-card-subtitle>
+    </ion-card-header>
+    
+    <ion-card-content>
+      <!--Service Request-->
+      <ion-label class="label" position="stacked">Service Request</ion-label>  
+      <ion-item>
+        <ion-grid>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,  sed do 
+            eiusmod tempor incididunt ut labore et dolore</p>
+        </ion-grid>
+      </ion-item>
+
+      <!--Site Name-->
+      <ion-label class="label" position="stacked">Site Name:</ion-label>
+      <ion-item>
+        <ion-grid>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,  sed do 
+            eiusmod tempor incididunt ut labore et dolore</p>
+        </ion-grid>
+      </ion-item>
+
+      <!--Site Equipement-->
+      <ion-label class="label" position="stacked">Site Equipment:</ion-label>
+        <ion-item>
+          <ion-label>Site Equipment</ion-label>
+          <ion-select multiple="true" cancelText="Cancel" okText="Okay">
+            <ion-select-option value="bacon">Gaggia Ruby Pro 1 GRP - Red</ion-select-option>
+            <ion-select-option value="olives">Gaggia Ruby Pro 1 GRP - Red</ion-select-option>
+            <ion-select-option value="xcheese">Gaggia Ruby Pro 1 GRP - Red</ion-select-option>
+            <ion-select-option value="peppers">Gaggia Ruby Pro 1 GRP - Red</ion-select-option>
+            <ion-select-option value="mushrooms">Gaggia Ruby Pro 1 GRP - Red</ion-select-option>
+          </ion-select>
+        </ion-item> 
+
+      <!--Site Address-->
+      <ion-label class="label" position="stacked">Site Address:</ion-label>
+      <ion-item>
+        <ion-grid>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,  sed do 
+            eiusmod tempor incididunt ut labore et dolore</p>
+        </ion-grid>
+      </ion-item>
+
+      <!--Description-->
+      <ion-label class="label" position="stacked">Description:</ion-label>
+      <ion-item>
+        <ion-grid>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,  sed do 
+          eiusmod tempor incididunt ut labore et dolore</p>
+        </ion-grid>
+      </ion-item>
+
+      <!--Contact Person-->
+      <ion-label class="label" position="stacked">Contact Person:</ion-label>
+      <ion-item>
+        <ion-grid>
+              <ion-label>
+                <p>Geraldyne Ambrocio</p>
+                <p>CEO</p>
+                <p>09662546594</p>
+              </ion-label>
+        </ion-grid>
+      </ion-item>
+
+      <!--Quoted-->
+      <ion-label class="label" position="stacked">Quoted:</ion-label>
+      <ion-item>
+        <p>YES</p>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+  
+  <!--TECH COMMENTS TAB-->
+  <ion-card *ngIf="segmentModel === 'tech'">
+    <ion-card-header>
+      <ion-card-subtitle>Tech Comments:</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      
+      <!--Contact Person-->
+      <ion-label class="label" position="stacked">Main fault Code:</ion-label>
+        <ion-item>
+          <ion-label>Fault Code</ion-label>
+          <ion-select multiple="true" cancelText="Cancel" okText="Okay">
+            <ion-select-option value="bacon">Code 1</ion-select-option>
+            <ion-select-option value="olives">Code 2</ion-select-option>
+            <ion-select-option value="xcheese">Code 3</ion-select-option>
+            <ion-select-option value="peppers">Code 4</ion-select-option>
+            <ion-select-option value="mushrooms">Code 5</ion-select-option>
+          </ion-select>
+        </ion-item> 
+     
+
+      <!--Problem-->
+      <ion-label class="label" position="stacked">Problem:</ion-label>
+      <ion-item>
+        <ion-grid>
+          <ion-textarea placeholder="Type here....">
+          </ion-textarea>
+        </ion-grid>
+      </ion-item>
+
+      <!--Action-->
+      <ion-label class="label" position="stacked">Actions:</ion-label>
+      <ion-item>
+        <ion-grid>
+          <ion-textarea placeholder="Type here....">
+          </ion-textarea>
+        </ion-grid>
+      </ion-item>
+
+      <!--Recommended-->
+      <ion-label class="label" position="stacked">Recommended:</ion-label>
+      <ion-item>
+        <ion-grid>
+          <ion-textarea placeholder="Type here....">
+          </ion-textarea>
+        </ion-grid>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <!--CHECKLIST TAB-->
+  <ion-card *ngIf="segmentModel === 'checklist'">
+    <ion-list-header> Expresso Machine </ion-list-header>
+  
+    <!-- 1st Item -->
+      <ion-item>
+        <ion-grid>
+          <ion-row class="ion-align-items-center">
+            <ion-col size="9">
+              <ion-label>
+                <h4>Grouphead & Wand Cleaning </h4>
+              </ion-label>
+            </ion-col>
+            <!-- <ion-icon name="add" (click)="cleaning()"></ion-icon> -->
+          </ion-row>
+        </ion-grid>
+      </ion-item>
+
+      <!-- 2nd Item -->
+      <ion-item>
+        <ion-grid>
+          <ion-row class="ion-align-items-center">
+            <ion-col size="9">
+              <ion-label>
+                <h4>Pressure Test & Calibration </h4>
+              </ion-label>
+            </ion-col>
+            <!-- <ion-icon name="add" (click)="calibration()"></ion-icon> -->
+          </ion-row>
+        </ion-grid>
+      </ion-item>
+
+  </ion-card>
+
+  <ion-card *ngIf="segmentModel === 'photo'">
+    <ion-button class="upload" (click)="photoService.addNewToGallery()">
+      UPLOAD PHOTO</ion-button>
+    </ion-card>
+  
+  <ion-card class="remarks" *ngIf="segmentModel === 'photo'">
+     <ion-card-header>
+      <ion-row>
+        <ion-col size="6" *ngFor="let photo of photoService.photos; index as position">
+          <ion-img [src]="photo.webviewPath" (click)="showActionSheet(photo, position)"></ion-img>
+          <!-- <ion-label>Caption</ion-label>
+          <ion-input placeholder="Type here...."></ion-input>
+          <ion-button>Save</ion-button> -->
+        </ion-col>
+        </ion-row> 
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-label>
+        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit,  sed do 
+          eiusmod tempor incididunt ut labore et dolore</h3>
+      </ion-label>
+    </ion-card-content>
+  </ion-card>
+
+  <!--CUSTOMER TAB-->
+  <!-- <ion-card *ngIf="segmentModel === 'just'">  
+  <ion-card class="remarks" *ngIf="segmentModel === 'photo'">
+    <ion-card-header>
+     <ion-img class="jeep-img" src="https://material.angular.io/assets/img/examples/shiba1.jpg"></ion-img>
+   </ion-card-header>
+ 
+   <ion-card-content>
+     <ion-label>
+       <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit,  sed do 
+         eiusmod tempor incididunt ut labore et dolore</h3>
+     </ion-label>
+   </ion-card-content>
+ </ion-card>
+ </ion-card> -->
+
+  <!-- SIGNATURE TAB -->
+  <ion-card *ngIf="segmentModel === 'just'">
+    <ion-card-header>
+      <ion-card-subtitle>Signature</ion-card-subtitle>
+      <canvas #canvas width="250" height="200"></canvas>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <!--Customer Name-->
+      <ion-label class="label" position="stacked">Customer Name</ion-label>  
+      <ion-item>
+        <ion-grid>
+          <ion-input placeholder="Input text here"></ion-input>
+        </ion-grid>
+      </ion-item>
+
+      <!--Position-->
+      <ion-label class="label" position="stacked">Position</ion-label>  
+      <ion-item>
+        <ion-grid>
+          <ion-input placeholder="Input text here"></ion-input>
+        </ion-grid>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <!--HISTORY TAB-->
+  <ion-card *ngIf="segmentModel === 'onemore'">
+    <!-- <ion-card-header>
+      <ion-card-subtitle>Segment Content</ion-card-subtitle>
+      <ion-card-title>One More</ion-card-title>
+    </ion-card-header> -->
+
+    <ion-list>
+      <ion-list-header> Recent History </ion-list-header>
+      <div>
+        <ion-card class="ion-card-offer">
+          <ion-card-header class="offer-bg">
+              <div>
+                  <ion-card-title><strong>#10136</strong><ion-badge class="badge-history" color="success"> Completed </ion-badge></ion-card-title>
+              </div>
+          </ion-card-header>
+          <ion-card-content class="offer-content">
+              <div>
+                  <p class="p-history"><strong>Sent to Technician</strong></p>
+                  <p class="p-history"><strong>Date:</strong> 03-25-22</p>
+                  <p class="p-history"><strong>Time:</strong> 16:58:26</p>
+              </div>
+          </ion-card-content>
+        </ion-card>
+
+        <ion-card class="ion-card-offer">
+          <ion-card-header class="offer-bg">
+              <div>
+                  <ion-card-title><strong>#10137</strong><ion-badge class="badge-history" color="danger"> Cancelled </ion-badge></ion-card-title>
+              </div>
+          </ion-card-header>
+          <ion-card-content class="offer-content">
+              <div>
+                  <p class="p-history"><strong>Sent to Technician</strong></p>
+                  <p class="p-history"><strong>Date:</strong> 03-25-22</p>
+                  <p class="p-history"><strong>Time:</strong> 16:58:26</p>
+              </div>
+          </ion-card-content>
+        </ion-card>
+
+        <ion-card class="ion-card-offer">
+          <ion-card-header class="offer-bg">
+              <div>
+                  <ion-card-title><strong>#10137</strong><ion-badge class="badge-history" color="danger"> Cancelled </ion-badge></ion-card-title>
+              </div>
+          </ion-card-header>
+          <ion-card-content class="offer-content">
+              <div>
+                  <p class="p-history"><strong>Sent to Technician</strong></p>
+                  <p class="p-history"><strong>Date:</strong> 03-25-22</p>
+                  <p class="p-history"><strong>Time:</strong> 16:58:26</p>
+              </div>
+          </ion-card-content>
+        </ion-card>
+      </div>
+      <!-- <ion-item class="list-history" no-line>
+        <ion-avatar slot="start">
+          <img src="/assets/icon/avatar-finn.png" />
+        </ion-avatar>
+        <ion-label>
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                  <h4 class="header-title">JOB #32  
+                    <ion-badge class="purple-badge">Pending</ion-badge>
+                  </h4>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+          <h3 class="history-content">I'm a big deal</h3>
+          <p>Listen, I've had a pretty messed up day...</p>
+        </ion-label>
+      </ion-item> -->
+    </ion-list>
+  </ion-card>
+
+  <ion-card *ngIf="segmentModel === 'tofill'">
+    <ion-card-header>
+      <ion-card-subtitle>Segment Content</ion-card-subtitle>
+      <ion-card-title>To Fill</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Keep close to Nature's heart... and break clear away, once in awhile,
+      and climb a mountain or spend a week in the woods. Wash your spirit clean.
+    </ion-card-content>
+  </ion-card>
+</ion-content>

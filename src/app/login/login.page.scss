@@ -1,0 +1,118 @@
+ion-content {
+    --offset-bottom: auto !important;
+    --overflow: hidden;
+    overflow: auto;
+    background: #ffffff;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  
+  ion-item {
+    background: var(--white);
+    border: 2px solid var(--dark-blue);
+    box-sizing: border-box;
+    height: 55px;
+    margin: 25px 20px 15px 20px;
+    border-radius: 10px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    text-align: left;
+  }
+    
+  ion-input {
+    font-family: 'Poppins', sans-serif;
+    color: var(--dark-blue);
+    height: 55px;
+  }
+  
+  ion-icon {
+    color: var(--dark-blue);
+    margin-right: 5px;
+    font-size: large;
+  }
+  
+  ion-button {
+    --background: var(--dark-blue);
+    --border-width: 50% !important;
+    max-width: 245px;
+    font-style: normal;
+    color: var(--white);
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+    
+  .img1 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    height: 65%;
+    margin-top: 70px;
+    margin-bottom: 20px;
+  }
+      
+  .h-green {
+    font-size: 30px !important;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    color: var(--black-gray);
+    text-align: left;
+    font-weight: bold;
+    margin-left: 18px;
+  }
+    
+  .wc-dark {
+    font-size: 30px !important;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 0px;
+    color: var(--dark-blue);
+    text-align: left;
+    font-weight: bold;
+    margin-left: 18px;
+  }
+    
+  .h5 {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 117.9%;
+    text-align: center;
+    color: var(--black-gray);
+    margin-top: 25px;
+  }
+    
+  .create-acc {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    color: var(--dark-blue);
+    text-decoration: none;
+  }
+    
+  .error-message {
+    color: var(--ion-color-danger);
+    font-weight: 600;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-size: 13px;
+    margin-left: 25px;
+  }
+    
+  .error-message-spacer {
+    margin-bottom: 0;
+  }
+  
+  .login-form-container{
+    margin-bottom: 0!important;
+    padding-bottom: 0!important;
+  } 

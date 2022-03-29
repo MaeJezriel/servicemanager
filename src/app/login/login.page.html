@@ -1,0 +1,39 @@
+<ion-content>
+  <form >
+    <ion-grid>
+      <img class="img1" src="/assets/icon/dunbrae.png" alt="Rectangle-219-1" border="0" />
+        <ion-row color="primary" justify-content-center>
+          <!--<ion-col align-self-center size-md="6" size-lg="5" size-xs="12">-->
+          <ion-col>
+            <div text-center>
+                <h3 class="h-green">Hey there,</h3>
+                <h3 class="wc-dark">Welcome back!</h3>
+            </div>
+
+            <div class="login-form-container">
+              <ion-item class="error-message-spacer">
+                <ion-icon name="mail-outline"></ion-icon>
+                <ion-input type="text" placeholder="Email/Phone Number" required></ion-input>
+              </ion-item>
+             
+                
+              <ion-item class="error-message-spacer">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <ion-input type="password"  placeholder="Password" required></ion-input>
+              </ion-item>
+             
+            </div>
+
+            <div>
+                <ion-button size="large" expand="block" shape="round" type="submit" routerLink="/tabs/tab1">LOGIN</ion-button>
+            </div>
+            <div>
+              <h4 class="h5">
+                Don't have an account? <a class="create-acc" type="submit">Create One</a>
+              </h4>
+            </div>
+          </ion-col>
+        </ion-row>
+  </ion-grid>
+</form>
+</ion-content>

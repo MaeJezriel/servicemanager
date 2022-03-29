@@ -1,0 +1,122 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-row>
+      <ion-col width-45>
+        <ion-title>Dunbrae Subic Inc.</ion-title> 
+      </ion-col>
+      <ion-col width-55 padding-vertical>
+        <ion-icon class="header-icon" name="exit-outline"  routerLink="/login"></ion-icon>
+      </ion-col>              
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!--Legends-->
+  <div class="legend" horizontal="end">
+    <ion-card-title><span class="inside-legend">Legend:&nbsp;&nbsp;</span>
+      <ion-badge class="badge-assigned">Assigned</ion-badge>&nbsp;
+      <ion-badge color="success">Completed</ion-badge>
+    </ion-card-title>
+  </div>
+
+  <!--Date Info-->
+  <div class="header">
+    <h3><span>7</span> Assigned Jobs</h3>
+    <h1>16</h1>
+    <h2>WED</h2>
+  </div>
+
+  <section no-padding>
+    <!--<header>Default Size</header>-->
+    <!-- <ion-button expand="full" no-margin>List</ion-button> -->
+    <!-- <ion-button expand="full" class="btn-month" no-margin (click)="month()">Month</ion-button> -->
+    <!-- <ion-button expand="full" class="btn-month" no-margin routerLink="/month">Month</ion-button>
+    <ion-button expand="full" class="btn-month" no-margin>Week</ion-button>
+    <ion-button expand="full" class="btn-month" no-margin>Day</ion-button> -->
+  </section>
+
+  <div class="container">
+    <!--List View of Jobs-->
+    <ion-item>
+      <ion-grid>
+        <ion-row class="ion-align-items-center">
+          <ion-icon class="icon-violet" name="ellipse"></ion-icon>
+          <ion-col size="9">
+            <ion-label>
+              <h4>Resorts World Manila</h4>
+              <h6>Preventive Maintenance.</h6>
+              <h3>11:30-12:30pm</h3>
+            </ion-label>
+          </ion-col>
+          <ion-icon name="person" (click)="openJobSummary()"></ion-icon>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+
+    <ion-item>
+      <ion-grid>
+        <ion-row class="ion-align-items-center">
+          <ion-icon class="icon-violet" name="ellipse"></ion-icon>
+          <ion-col size="9">
+            <ion-label>
+              <h4>Manila</h4>
+              <h6>Coffee Maker</h6>
+              <h3>11:30-12:30pm</h3>
+            </ion-label>
+          </ion-col>
+          <ion-icon name="person" (click)="openJobSummary()"></ion-icon>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+
+    <ion-item>
+      <ion-grid>
+        <ion-row class="ion-align-items-center">
+          <ion-icon class="icon-success" name="ellipse"></ion-icon>
+          <ion-col size="9">
+            <ion-label>
+              <h4>Lunch with Mae</h4>
+              <h6>Pantry at Subic Bay Inc.</h6>
+              <h3>11:30-12:30pm</h3>
+            </ion-label>
+          </ion-col>
+          <ion-icon name="person" (click)="openJobSummary()"></ion-icon>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+
+    <ion-item>
+      <ion-grid>
+        <ion-row class="ion-align-items-center">
+          <ion-icon class="icon-violet" name="ellipse"></ion-icon>
+          <ion-col size="9">
+            <ion-label>
+              <h4>Resorts World Manila</h4>
+              <h6>Preventive Maintenance.</h6>
+              <h3>11:30-12:30pm</h3>
+            </ion-label>
+          </ion-col>
+          <ion-icon name="person" (click)="openJobSummary()"></ion-icon>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+
+    <ion-item>
+      <ion-grid>
+        <ion-row class="ion-align-items-center">
+          <ion-icon class="icon-success" name="ellipse"></ion-icon>
+          <ion-col size="9">
+            <ion-label>
+              <h4>Resorts World Manila</h4>
+              <h6>Preventive Maintenance.</h6>
+              <h3>11:30-12:30pm</h3>
+            </ion-label>
+          </ion-col>
+          <ion-icon name="person" (click)="openJobSummary()"></ion-icon>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+    
+  </div>
+</ion-content>
