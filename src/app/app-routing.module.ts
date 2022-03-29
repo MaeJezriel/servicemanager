@@ -10,6 +10,14 @@ const routes: Routes = [
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
+  {
+    path: 'cleaning',
+    loadChildren: () => import('./checklist-modal/cleaning/cleaning.module').then( m => m.CleaningPageModule)
+  },
+  {
+    path: 'calibration',
+    loadChildren: () => import('./checklist-modal/calibration/calibration.module').then( m => m.CalibrationPageModule)
+  },
   
   
 

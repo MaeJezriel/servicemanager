@@ -1,5 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { ActionSheetController, IonSlides, ModalController } from '@ionic/angular';
+import { CalibrationPage } from '../checklist-modal/calibration/calibration.page';
+import { CleaningPage } from '../checklist-modal/cleaning/cleaning.page';
 import { UserPhoto, PhotoService } from '../services/photo.service';
 
 @Component({
@@ -37,22 +39,22 @@ export class Tab2Page {
 
 
   // //modal
-  // public async cleaning() {
-  //   const modal = await this.modalCtrl.create({
-  //     component: CleaningPage,
-  //     cssClass: 'my-custom-class'
-  //   });
-  //   return await modal.present();
-  // }
+  public async cleaning() {
+    const modal = await this.modalCtrl.create({
+      component: CleaningPage,
+      cssClass: 'my-custom-class'
+    });
+    return await modal.present();
+  }
 
   //  //modal
-  //  public async calibration() {
-  //   const modal = await this.modalCtrl.create({
-  //     component: CalibrationPage,
-  //     cssClass: 'my-custom-class'
-  //   });
-  //   return await modal.present();
-  // }
+   public async calibration() {
+    const modal = await this.modalCtrl.create({
+      component: CalibrationPage,
+      cssClass: 'my-custom-class'
+    });
+    return await modal.present();
+  }
 
   //image
   async ngOnInit() {

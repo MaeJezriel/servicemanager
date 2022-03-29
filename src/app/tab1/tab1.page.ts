@@ -11,6 +11,11 @@ export class Tab1Page {
 
   constructor(private modalCtrl: ModalController, private modalController: ModalController) {}
 
+  public date:any = new Date().toISOString();
+  public dates:any = new Date().toISOString();
+
+  now = new Date();
+  
   ngOnInit() { }
 
 

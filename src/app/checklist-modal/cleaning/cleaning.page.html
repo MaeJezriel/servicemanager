@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+  <ion-buttons slot="start">
+      <ion-icon class="back" name="chevron-back" (click)="dismiss();" defaultHref></ion-icon>
+    </ion-buttons>
+    <ion-title>Grouphead & Wand Cleaning</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-card class="ion-card">
+    <ion-label>1. Grouphead Shower(s) Cleaned</ion-label>
+		<ion-item *ngFor="let grouphead of groupheads; let i = index">
+			<ion-label>{{grouphead.name1}}</ion-label>
+			<ion-checkbox 
+        [disabled]="groupheads[i].value" 
+        (click)="selection1(grouphead.name1);">
+			</ion-checkbox>
+		</ion-item>
+    <ion-textarea class="gwc" placeholder="Remarks"></ion-textarea>
+   
+    <br><br>
+    <ion-label>2. Group Shower(s) Cleaned</ion-label>
+		<ion-item *ngFor="let group of groups; let i = index">
+			<ion-label>{{group.name2}}</ion-label>
+			<ion-checkbox 
+        [disabled]="groups[i].value" 
+        (click)="selection2(group.name2);">
+			</ion-checkbox>
+		</ion-item>
+    <ion-textarea placeholder="Remarks"></ion-textarea>
+
+    <br><br>
+    <ion-label>3. Group Gasket Cleaned and No Leak</ion-label>
+		<ion-item *ngFor="let gasket of  gaskets; let i = index">
+			<ion-label>{{gasket.name3}}</ion-label>
+			<ion-checkbox 
+        [disabled]="gaskets[i].value" 
+        (click)="selection3(gasket.name3);">
+			</ion-checkbox>
+		</ion-item>
+    <ion-textarea placeholder="Remarks"></ion-textarea>
+	</ion-card>
+</ion-content>

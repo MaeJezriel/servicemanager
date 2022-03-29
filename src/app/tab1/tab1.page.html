@@ -23,9 +23,13 @@
   <!--Date Info-->
   <div class="header">
     <h3><span>7</span> Assigned Jobs</h3>
-    <h1>16</h1>
-    <h2>WED</h2>
-  </div>
+    
+   <h1><ion-datetime [(ngModel)]="date"
+    displayFormat="DD" readonly>
+    </ion-datetime></h1>
+    <h2><ion-datetime [(ngModel)]="dates"
+    displayFormat="DDD" readonly></ion-datetime></h2> 
+    </div>
 
   <section no-padding>
     <!--<header>Default Size</header>-->
