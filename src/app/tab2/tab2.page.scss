@@ -11,10 +11,10 @@ ion-card{
 }
 
 ion-icon {
-    font-weight: bold;
-    margin-left: 40px;
-    font-size: 20px;
-    display: block;
+  font-weight: bold;
+  margin-left: 40px;
+  font-size: 20px;
+  display: block;
 }
 
 ion-textarea {
@@ -242,13 +242,26 @@ ion-button {
   width: 45%;
   display: inline-block;
 }
+
 .upload {
   box-shadow: none !important;
   border-style: none;
   border-style: none;
   border-radius: 0%;
-  width: 47%;
-  margin-left: 10%;
+  width: 70%;
+  display: inline-block;
+  text-align: center;
+}
+
+ion-img {
+  width: 90px;
+}
+
+.icon-btn {
+  font-weight: bold;
+  margin-left: -20px;
+  font-size: 20px;
+  // display: block;
 }
 
 .btnstart{
@@ -325,8 +338,6 @@ h5 {
   }
 }
 
-
-
 //Photo tab
 
 .remarks {
@@ -337,65 +348,121 @@ h5 {
   color: #000000;
   font-weight: 600;
   background: var(--white);
-  border: 2px solid var(--dark-blue);
-} 
-h4 {
-  font-weight: 600;
-  font-size: 12px;
+  // border: 2px solid var(--dark-blue);
+
+  h4 {
+    font-weight: 600;
+    font-size: 15px;
+    margin-left: 20px;
+    color: var(--dark-blue);
+    white-space: initial;
+  }
+
+  .image {
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    color: var(--white);
+    border: 2px solid var(--dark-blue);
+  }
+}
+
+.input {
+  width: fit-content;
   margin-left: 10px;
-  color: var(--dark-blue);
   white-space: initial;
 }
-h6, h3 {
-  color: var(--black-gray);
+
+.img-btn-save {
+  --background: var(--dark-blue);
+  color: var(--white);
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  font-weight: bold;
   margin-left: 10px;
+}
+
+.h6-upload {
+  font-weight: 400;
+  text-align: center;
+  font-size: 13px;
+  color: gray;
+  white-space: initial;
+  font-family: 'Poppins', sans-serif;
+  padding: 0;
+  margin-top: -10px;
+}
+
+//hr class
+hr{
+  border: 0;
+  height: 1.5px;
+  width: 80%;
+  position: relative;
+  margin: 30px auto;
+  
+  
+  &.center-ball{
+    background: var(--black-gray);
+    
+    // &:before{
+    //   content: "";
+    //   width: 90px;
+    //   height: 90px;
+    //   background: var(--black-gray);
+    //   display: inline-block;
+    //   border: 2px solid var(--black-gray);
+    //   border-radius: 50%;
+    //   position: absolute;
+    //   top: -4px;
+    //   left: 45%;
+    //   margin: 0 0 0 -3px;
+    // }
+  }
 }
 
 //history
-.list-history {
-  background: none;
-  padding: 0;
-  margin: 13px 0;
-  color: #000000;
-  border: none;
-  border-bottom: var(--black-gray) !important;
-}
+// .list-history {
+//   background: none;
+//   padding: 0;
+//   margin: 13px 0;
+//   color: #000000;
+//   border: none;
+//   border-bottom: var(--black-gray) !important;
+// }
 
-.history-content{
-  margin-left: 0;
-}
+// .history-content{
+//   margin-left: 0;
+// }
 
-.icon-history {
-  color: var(--black-gray) !important;
-  font-weight: bold;
-  font-size: 30px;
-}
+// .icon-history {
+//   color: var(--black-gray) !important;
+//   font-weight: bold;
+//   font-size: 30px;
+// }
 
-.header-title {
-  font-weight: 550;
-  font-size: 18px;
-  color: var(--black-gray);
-  padding: 0;
-  text-align: left;
-  margin-left: -3px;
-  white-space: initial;
-  font-family: 'Poppins', sans-serif;
-}
+// .header-title {
+//   font-weight: 550;
+//   font-size: 18px;
+//   color: var(--black-gray);
+//   padding: 0;
+//   text-align: left;
+//   margin-left: -3px;
+//   white-space: initial;
+//   font-family: 'Poppins', sans-serif;
+// }
 
-.purple-badge {
-  color: #bb1b30;
-  background: #f07485;
-  font-family: 'Poppins', sans-serif;
-  width: 40%;
-  height: 20%;
-}
-
+// .purple-badge {
+//   color: #bb1b30;
+//   background: #f07485;
+//   font-family: 'Poppins', sans-serif;
+//   width: 40%;
+//   height: 20%;
 
 //CHECKLIST
 .add{
   --color: var(--black-gray);
     font-weight: bold;
-    
     font-size: 20px;
 }
 
@@ -414,7 +481,7 @@ h6, h3 {
   font-style: normal;
   color: var(--white);
   font-family: var(--body-font);
-  font-weight: bold;
+  //font-weight: bold;
   text-align: center;
   margin: auto;
   margin-top: 15px;
@@ -455,7 +522,19 @@ ion-card-title {
 }
 
 .p-history {
-  font-size: medium;
+  // font-weight: 600;
+  font-size: 12px;
+  margin-left: 10px;
+  color: var(--black-gray);
+  white-space: initial;
+  font-weight: 500;
+}
+
+.history-content {
+  margin-left: 10px;
+  color: var(--black-gray);
+  white-space: initial;
+  font-weight: 500;
 }
 
 ion-list-header {
@@ -464,10 +543,57 @@ ion-list-header {
   color: var(--black-gray);
 }
 
+.history-complete {
+  color: var(--green-success);
+  font-size: 20px !important;
+  margin-left: -5px;
+}
 
+.history-time {
+  color: var(--black-gray);
+  font-size: 20px !important;
+  margin-left: -5px;
+}
+
+.history-close {
+  color: var(--red-warning);
+  font-size: 20px !important;
+  margin-left: -5px;
+  // background: var(--dark-blue);
+  // border-radius: 50%;
+}
+
+.history-h6 {
+  margin: 0;
+}
+
+.grid-history {
+  margin-top: -10px;
+}
+
+ion-content ion-progress-bar {
+  margin: 10px 0;
+}
+
+:root {
+  --ion-safe-area-top: 20px;
+  --ion-safe-area-bottom: 22px;
+}
+
+//signature
 canvas {
   display: block;
   box-shadow: 0 0 5px 1px #999;
   margin: 2em auto;
 }
 
+.clean-btn {
+  --background: var(--dark-blue);
+  color: var(--white);
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  margin-top: 20px;
+  width: 100%;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
