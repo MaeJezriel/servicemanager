@@ -183,7 +183,7 @@
       <ion-label class="label" position="stacked">Main fault Code:</ion-label>
         <ion-item>
           <ion-label>Fault Code</ion-label>
-          <ion-select multiple="true" cancelText="Cancel" okText="Okay">
+          <ion-select interface="popover" multiple="true" cancelText="Cancel" okText="Okay">
             <ion-select-option value="bacon">Not an Equip Failure External</ion-select-option>
             <ion-select-option value="olives">Operator Error Caused Failure</ion-select-option>
             <ion-select-option value="xcheese">Installation Commisioning</ion-select-option>
@@ -236,7 +236,7 @@
           <ion-row class="ion-align-items-center">
             <ion-col size="9">
               <ion-label>
-                <h4>Grouphead & Wand Cleaning </h4>
+                <h4 class="checklist">Grouphead & Wand Cleaning </h4>
               </ion-label>
             </ion-col>
             <ion-icon name="add" (click)="cleaning()"></ion-icon>

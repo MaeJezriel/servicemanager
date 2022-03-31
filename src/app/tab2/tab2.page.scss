@@ -358,6 +358,11 @@ h5 {
     white-space: initial;
   }
 
+  .checklist {
+    color: var(--dark-blue) !important;
+    font-size: 30px;
+  }
+
   .image {
     display: flex;
     justify-content: center;
@@ -464,6 +469,11 @@ hr{
   --color: var(--black-gray);
     font-weight: bold;
     font-size: 20px;
+}
+
+.checklist {
+  color: var(--dark-blue) !important;
+  font-size: 12px;
 }
 
 //HISTORY
