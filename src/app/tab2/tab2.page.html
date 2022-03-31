@@ -307,7 +307,8 @@
   <ion-card *ngIf="segmentModel === 'just'">
     <ion-card-header>
       <ion-card-subtitle>Signature</ion-card-subtitle>
-      <canvas #canvas width="250" height="200"></canvas>
+      <ion-button class="btnstart" (click)="signature();" >Open Signature</ion-button>
+      
     </ion-card-header>
   
     <ion-card-content>

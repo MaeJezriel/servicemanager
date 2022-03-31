@@ -2,6 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { ActionSheetController, IonSlides, ModalController } from '@ionic/angular';
 import { CalibrationPage } from '../checklist-modal/calibration/calibration.page';
 import { CleaningPage } from '../checklist-modal/cleaning/cleaning.page';
+import { SignaturePage } from '../customer-modal/signature/signature.page';
 import { UserPhoto, PhotoService } from '../services/photo.service';
 
 @Component({
@@ -55,6 +56,15 @@ export class Tab2Page {
     });
     return await modal.present();
   }
+
+     // //modal
+     public async signature() {
+      const modal = await this.modalCtrl.create({
+        component: SignaturePage,
+        cssClass: 'my-custom-class'
+      });
+      return await modal.present();
+    }
 
   //image
   async ngOnInit() {

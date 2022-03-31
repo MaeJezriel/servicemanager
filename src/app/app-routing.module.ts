@@ -18,6 +18,10 @@ const routes: Routes = [
     path: 'calibration',
     loadChildren: () => import('./checklist-modal/calibration/calibration.module').then( m => m.CalibrationPageModule)
   },
+  {
+    path: 'signature',
+    loadChildren: () => import('./customer-modal/signature/signature.module').then( m => m.SignaturePageModule)
+  },
   
   
 
