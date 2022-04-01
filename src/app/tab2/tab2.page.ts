@@ -1,5 +1,6 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActionSheetController, IonSlides, ModalController } from '@ionic/angular';
+import { ApiService } from '../api.service';
 import { CalibrationPage } from '../checklist-modal/calibration/calibration.page';
 import { CleaningPage } from '../checklist-modal/cleaning/cleaning.page';
 import { SignaturePage } from '../customer-modal/signature/signature.page';
@@ -10,7 +11,11 @@ import { UserPhoto, PhotoService } from '../services/photo.service';
   templateUrl: 'tab2.page.html',
   styleUrls: ['tab2.page.scss']
 })
-export class Tab2Page {
+export class Tab2Page implements OnInit {
+
+  //api
+  datauser: any;
+
 
   @ViewChild("SwipedSliderContainer", { static: true })
   public SwipedSliderContainer: IonSlides;
@@ -18,7 +23,7 @@ export class Tab2Page {
   public tabs: any = [];
   public tabIndex: number;
 
-  constructor(private modalCtrl: ModalController,
+  constructor(private modalCtrl: ModalController, public api: ApiService,
     public photoService: PhotoService, public actionSheetController: ActionSheetController) {}
 
   public segmentChange(event) {
@@ -39,7 +44,7 @@ export class Tab2Page {
   }
 
 
-  // //modal
+  //modal
   public async cleaning() {
     const modal = await this.modalCtrl.create({
       component: CleaningPage,
@@ -69,6 +74,7 @@ export class Tab2Page {
   //image
   async ngOnInit() {
     await this.photoService.loadSaved();
+    this.getDataUser();
   }
 
   public async showActionSheet(photo: UserPhoto, position: number) {
@@ -91,6 +97,21 @@ export class Tab2Page {
       }]
     });
     await actionSheet.present();
+  }
+
+
+
+
+//api
+async getDataUser() {
+  await this.api.getDataUser()
+    .subscribe(res => {
+      console.log(res);
+      this.datauser = res.results;
+      console.log(this.datauser);
+    }, err => {
+      console.log(err);
+    });
   }
 }
 

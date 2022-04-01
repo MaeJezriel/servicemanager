@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ModalController } from '@ionic/angular';
+import { ApiService } from '../api.service';
 import { Tab2Page } from '../tab2/tab2.page';
 
 @Component({
@@ -9,7 +10,12 @@ import { Tab2Page } from '../tab2/tab2.page';
 })
 export class Tab1Page {
 
-  constructor(private modalCtrl: ModalController, private modalController: ModalController) {}
+    //api
+    datauser: any;
+
+
+  constructor(private modalCtrl: ModalController, private modalController: ModalController,
+    public api: ApiService) {}
 
   public date:any = new Date().toISOString();
   public dates:any = new Date().toISOString();
