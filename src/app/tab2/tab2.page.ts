@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActionSheetController, IonSlides, ModalController } from '@ionic/angular';
+import { SignaturePad } from 'angular2-signaturepad';
 import { ApiService } from '../api.service';
 import { CalibrationPage } from '../checklist-modal/calibration/calibration.page';
 import { CleaningPage } from '../checklist-modal/cleaning/cleaning.page';
@@ -12,6 +13,15 @@ import { UserPhoto, PhotoService } from '../services/photo.service';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page implements OnInit {
+
+  //canvas
+  @ViewChild(SignaturePad) signaturePad: SignaturePad;
+  signatureImg : string;
+  signaturePadOptions: Object = { 
+    'minWidth': 5,
+    'canvasWidth': 500,
+    'canvasHeight': 300
+  };
 
   //api
   datauser: any;
