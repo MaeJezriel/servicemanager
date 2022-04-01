@@ -21,7 +21,11 @@ const routes: Routes = [
   {
     path: 'signature',
     loadChildren: () => import('./customer-modal/signature/signature.module').then( m => m.SignaturePageModule)
+  },  {
+    path: 'view-details',
+    loadChildren: () => import('./history-modal/view-details/view-details.module').then( m => m.ViewDetailsPageModule)
   },
+
   
   
 

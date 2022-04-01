@@ -4,6 +4,7 @@ import { ApiService } from '../api.service';
 import { CalibrationPage } from '../checklist-modal/calibration/calibration.page';
 import { CleaningPage } from '../checklist-modal/cleaning/cleaning.page';
 import { SignaturePage } from '../customer-modal/signature/signature.page';
+import { ViewDetailsPage } from '../history-modal/view-details/view-details.page';
 import { UserPhoto, PhotoService } from '../services/photo.service';
 
 @Component({
@@ -44,7 +45,7 @@ export class Tab2Page implements OnInit {
   }
 
 
-  //modal
+  //Cleaning
   public async cleaning() {
     const modal = await this.modalCtrl.create({
       component: CleaningPage,
@@ -53,17 +54,17 @@ export class Tab2Page implements OnInit {
     return await modal.present();
   }
 
-  //  //modal
+  //Calibration
    public async calibration() {
-    const modal = await this.modalCtrl.create({
-      component: CalibrationPage,
-      cssClass: 'my-custom-class'
-    });
-    return await modal.present();
+     const modal = await this.modalCtrl.create({
+       component: CalibrationPage,
+       cssClass: 'my-custom-class'
+      });
+      return await modal.present();
   }
 
-     // //modal
-     public async signature() {
+  //Signature
+    public async signature() {
       const modal = await this.modalCtrl.create({
         component: SignaturePage,
         cssClass: 'my-custom-class'
@@ -71,7 +72,16 @@ export class Tab2Page implements OnInit {
       return await modal.present();
     }
 
-  //image
+  //View Details in History Page
+    public async historydetails() {
+      const modal = await this.modalCtrl.create({
+        component: ViewDetailsPage,
+        cssClass: 'my-custom-class'
+      });
+      return await modal.present();
+    }
+
+  //Image
   async ngOnInit() {
     await this.photoService.loadSaved();
     this.getDataUser();

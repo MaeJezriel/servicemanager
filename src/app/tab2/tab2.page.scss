@@ -517,7 +517,7 @@ ion-card-title {
 }
 
 .ion-card-offer {
-  margin: 25px 0px 5px 0px;
+  margin: 10px 0px 5px 0px;
   padding: 5px;
   border-radius: 15px;
   background-color: var(--light-gray);
@@ -579,13 +579,54 @@ ion-list-header {
   margin-top: -10px;
 }
 
-ion-content ion-progress-bar {
-  margin: 10px 0;
-}
+// ion-content ion-progress-bar {
+//   margin: 10px 0;
+// }
 
 :root {
   --ion-safe-area-top: 20px;
   --ion-safe-area-bottom: 22px;
+}
+
+.container1 {
+  padding: 10px 40px;
+}
+
+.container1 ul {
+  list-style: none;
+  position: relative;
+  padding: 0;
+}
+
+.container1 ul::before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: var(--gray);
+}
+
+.container1 ul li { 
+  padding: 20px 20px;
+}
+
+.container1 ul li div {
+  padding: 5px 10px;
+  font-size: 14px;
+  margin-left: 20px;
+  white-space: initial;
+}
+
+.container1 ul li span {
+  color: var(--dark-blue);
+  font-weight: 600;
+  position: absolute;
+  left: -25px;
+  font-size: 12px;
+  background-color: var(--white);
+  padding: 5px 0;
 }
 
 //SIGNATURE

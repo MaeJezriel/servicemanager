@@ -395,12 +395,12 @@
                       </ion-col>
                     </ion-row>
                   </ion-grid>
-                  <ion-button class="btn-history" expand="block">View Details</ion-button>
+                  <ion-button class="btn-history" (click)="historydetails()" expand="block">View Details</ion-button>
               </div>
           </ion-card-content>
         </ion-card>
         
-        <ion-card class="ion-card-offer">
+        <!-- <ion-card class="ion-card-offer">
           <ion-card-header class="offer-bg">
             <div>
               <ion-card-title><strong>#10137</strong><ion-badge class="badge-history" color="danger"> Cancelled </ion-badge></ion-card-title>
@@ -415,26 +415,8 @@
                   <ion-button class="btn-history" expand="block">View Details</ion-button>
               </div>
           </ion-card-content>
-        </ion-card>
+        </ion-card> -->
       </div>
-      <!-- <ion-item class="list-history" no-line>
-        <ion-avatar slot="start">
-          <img src="/assets/icon/avatar-finn.png" />
-        </ion-avatar>
-        <ion-label>
-          <ion-grid>
-            <ion-row>
-              <ion-col>
-                  <h4 class="header-title">JOB #32  
-                    <ion-badge class="purple-badge">Pending</ion-badge>
-                  </h4>
-              </ion-col>
-            </ion-row>
-          </ion-grid>
-          <h3 class="history-content">I'm a big deal</h3>
-          <p>Listen, I've had a pretty messed up day...</p>
-        </ion-label>
-      </ion-item> -->
     </ion-list>
   </ion-card>
 

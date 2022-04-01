@@ -1,0 +1,62 @@
+* {
+  font-family: var(--body-font);
+}
+
+ion-header, ion-toolbar {
+  --background: var(--dark-blue);
+}
+
+ion-title {
+    font-family: 'Poppins', sans-serif;
+    color: var(--white);
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.back{
+    color: var(--white) !important;
+    font-weight: bold;
+    margin-left: 15px;
+    font-size: 20px;
+}
+
+.container1 {
+    padding: 10px 40px;
+}
+
+.container1 ul {
+    list-style: none;
+    position: relative;
+    padding: 0;
+}
+
+.container1 ul::before {
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: var(--gray);
+}
+
+.container1 ul li { 
+    padding: 20px 20px;
+}
+
+.container1 ul li div {
+    padding: 5px 0px;
+    font-size: 14px;
+    margin-left: 25px;
+    white-space: initial;
+}
+
+.container1 ul li span {
+    color: var(--dark-blue);
+    font-weight: 600;
+    position: absolute;
+    left: -25px;
+    font-size: 12px;
+    background-color: var(--white);
+    padding: 5px 0;
+}
