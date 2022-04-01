@@ -2,14 +2,23 @@ ion-content {
     --offset-bottom: auto !important;
     --overflow: hidden;
     overflow: auto;
-    background: #ffffff;
+    // background: #ffffff;
+    background-image: linear-gradient(
+    rgba(255, 255, 255, 0.527),
+    rgba(255, 255, 255, 0.5)
+    ),
+    url("/assets/icon/dsi.jpg");
+    background-size: cover;
+    min-height: 20vh;
+    background-position: center;
     &::-webkit-scrollbar {
       display: none;
     }
   }
   
   ion-item {
-    background: var(--white);
+    // background: var(--white);
+    --ion-item-background: transparent;
     border: 2px solid var(--dark-blue);
     box-sizing: border-box;
     height: 55px;
@@ -29,7 +38,7 @@ ion-content {
   
   ion-icon {
     color: var(--dark-blue);
-    margin-right: 5px;
+    margin-right: 15px;
     font-size: large;
   }
   
@@ -44,6 +53,7 @@ ion-content {
     text-align: center;
     margin: auto;
     margin-top: 20px;
+    margin-bottom: 10px;
     display: flex;
     justify-content: center;
   }
@@ -52,16 +62,16 @@ ion-content {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 70%;
-    height: 65%;
-    margin-top: 70px;
-    margin-bottom: 20px;
+    width: 90%;
+    height: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
   }
       
   .h-green {
     font-size: 30px !important;
     font-family: 'Poppins', sans-serif;
-    margin-top: 20px;
+    margin-top: 40px;
     margin-bottom: 0px;
     color: var(--black-gray);
     text-align: left;
@@ -73,6 +83,7 @@ ion-content {
     font-size: 30px !important;
     font-family: 'Poppins', sans-serif;
     margin-top: 0px;
+    margin-bottom: 40px;
     color: var(--dark-blue);
     text-align: left;
     font-weight: bold;
@@ -112,7 +123,22 @@ ion-content {
     margin-bottom: 0;
   }
   
-  .login-form-container{
-    margin-bottom: 0!important;
-    padding-bottom: 0!important;
-  } 
+  .card {
+    // position: fixed;
+    // position: relative;
+    //  bottom: 0 !important;
+    // margin-bottom: 0% !important;
+    width: 90%;
+    height: 100%;
+    background: var(--white);
+    border-radius: 1.5rem;
+    padding: 15px;
+    margin: auto;
+  }
+
+  p{
+    font-size: 0.8em;
+    text-align: center;
+    font-family: var(--body-font);
+    margin-top: 10%;
+  }

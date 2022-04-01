@@ -3,7 +3,7 @@
 //   //--background: #D0DEEB;
 // }
 * {
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--body-font);
 }
 
 ion-card{
@@ -64,7 +64,7 @@ ion-label {
 }
 
 .h2{
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--body-font);
     color: gray;
     font-weight: lighter;
     margin-top: 50%;
@@ -74,7 +74,7 @@ ion-label {
 }
 
 .h1{
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--body-font);
     color: var(--blue-green-dark);
     font-weight: bold;
     margin-top: 50%;
@@ -100,7 +100,7 @@ ion-label {
     font-weight: 600;
 }
 
-//For Cards
+// FOR CARDS
 
 ion-badge{
   margin-left: 2%;
@@ -117,7 +117,7 @@ ion-badge{
 .green-badge {
   color: #2b9e4e;
   background: #4ae779;
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--body-font);
   width: 20%;
   height: 20%;
 }
@@ -125,7 +125,7 @@ ion-badge{
 .red-badge {
   color: #bb1b30;
   background: #f07485;
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--body-font);
   width: 20%;
   height: 20%;
 }
@@ -149,7 +149,7 @@ ion-badge{
   padding: 0;
   text-align: center;
   white-space: initial;
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--body-font);
 }
 
 
@@ -159,7 +159,7 @@ h6 {
   font-size: 13px;
   color: gray;
   white-space: initial;
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--body-font);
   padding: 0;
   margin-top: -10px;
 }
@@ -170,7 +170,7 @@ h3 {
   margin-left: -30%;
   color: gray;
   white-space: initial;
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--body-font);
 }
 
 .small-icon {
@@ -179,7 +179,7 @@ h3 {
   margin-left: -90%;
   color: gray;
   white-space: initial;
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--body-font);
 }
 
 
@@ -192,7 +192,7 @@ h3 {
   // margin-top: 20px;
 }
 
-// For Segments 
+// FOR SEGMENTS
 
 ion-label{
   color:#003C77;
@@ -200,7 +200,7 @@ ion-label{
 }
 
 ion-card-subtitle{
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--body-font);
   color: rgb(80, 79, 79);
   font-weight: bolder;
   font-size: 15px;
@@ -226,13 +226,13 @@ ion-item {
 }
 
 .label{
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--body-font);
   color: rgb(80, 79, 79);
   font-weight: bold;
   font-size: 13px; 
 }
 
-// For Buttons
+// FOR BUTTONS
 
 ion-button {
   box-shadow: none !important;
@@ -249,6 +249,7 @@ ion-button {
   border-style: none;
   border-radius: 0%;
   width: 70%;
+  --background: #30B2EA;
   display: inline-block;
   text-align: center;
 }
@@ -292,7 +293,7 @@ section:not(.full-width),
   padding: 0 10px;
 }
 
-// For Labels
+// FOR LABELS
 h5 {
   text-align: center;
   line-height: 1.4em;
@@ -338,8 +339,7 @@ h5 {
   }
 }
 
-//Photo tab
-
+//PHOTO/CUSTOMER
 .remarks {
   background: none;
   padding: 0;
@@ -356,11 +356,6 @@ h5 {
     margin-left: 20px;
     color: var(--dark-blue);
     white-space: initial;
-  }
-
-  .checklist {
-    color: var(--dark-blue) !important;
-    font-size: 30px;
   }
 
   .image {
@@ -381,10 +376,10 @@ h5 {
 .img-btn-save {
   --background: var(--dark-blue);
   color: var(--white);
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--body-font);
   text-align: center;
-  font-weight: bold;
-  margin-left: 10px;
+  // font-weight: bold;
+  margin-left: 15px;
 }
 
 .h6-upload {
@@ -393,16 +388,16 @@ h5 {
   font-size: 13px;
   color: gray;
   white-space: initial;
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--body-font);
   padding: 0;
   margin-top: -10px;
 }
 
-//hr class
+//hr Class
 hr{
   border: 0;
   height: 1.5px;
-  width: 80%;
+  width: 70%;
   position: relative;
   margin: 30px auto;
   
@@ -474,6 +469,9 @@ hr{
 .checklist {
   color: var(--dark-blue) !important;
   font-size: 12px;
+  font-weight: bold;
+  margin-left: 0%;
+  white-space: initial;
 }
 
 //HISTORY
@@ -527,7 +525,7 @@ ion-card-title {
 }
 
 .badge-history {
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--body-font);
   font-weight: normal;
 }
 
@@ -590,7 +588,7 @@ ion-content ion-progress-bar {
   --ion-safe-area-bottom: 22px;
 }
 
-//signature
+//SIGNATURE
 canvas {
   display: block;
   box-shadow: 0 0 5px 1px #999;
@@ -600,10 +598,20 @@ canvas {
 .clean-btn {
   --background: var(--dark-blue);
   color: var(--white);
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--body-font);
+  text-align: center;
+  margin-top: 20px;
+  width: 80%;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.signature-btn {
+  --background: var(--dark-blue);
+  color: var(--white);
+  font-family: var(--body-font);
   text-align: center;
   margin-top: 20px;
   width: 100%;
   margin-bottom: 20px;
-  font-weight: bold;
 }

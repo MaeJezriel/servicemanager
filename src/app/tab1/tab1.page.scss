@@ -113,7 +113,7 @@ section:not(.full-width),
   }
 
   h3{
-    margin: 30px 0px 0px 25px;
+    margin: 5px 0px 0px 25px;
     color: var(--black-gray);
     font-size: 19px;
   }
@@ -167,13 +167,19 @@ ion-badge {
 }
 
 .legend {
-  text-align: right;
-  margin-right: 15px;
-  margin-top: -20px;
+  text-align: left;
+  // margin-right: 15px;
+  margin-top: 20px;
+  margin-left: 5px;
 }
 
 .inside-legend{
   color: var(--black-gray);
+  // margin-top: -50px !important;
+}
+
+.badge {
+  margin-left: 20px;
 }
 
 .header-icon {
