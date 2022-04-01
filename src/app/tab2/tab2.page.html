@@ -123,14 +123,11 @@
       <!--Site Equipement-->
       <ion-label class="label" position="stacked">Site Equipment:</ion-label>
         <ion-item>
-          <ion-label>Site Equipment</ion-label>
+         
           <ion-select multiple="true" cancelText="Cancel" okText="Okay">
-            <ion-select-option value="bacon">Gaggia Ruby Pro 1 GRP - Red</ion-select-option>
-            <ion-select-option value="olives">Gaggia Ruby Pro 1 GRP - Red</ion-select-option>
-            <ion-select-option value="xcheese">Gaggia Ruby Pro 1 GRP - Red</ion-select-option>
-            <ion-select-option value="peppers">Gaggia Ruby Pro 1 GRP - Red</ion-select-option>
-            <ion-select-option value="mushrooms">Gaggia Ruby Pro 1 GRP - Red</ion-select-option>
-          </ion-select>
+            <ion-select-option *ngFor="let data of datauser" >{{data.email}}</ion-select-option>
+           </ion-select>
+
         </ion-item> 
 
       <!--Site Address-->
@@ -181,18 +178,10 @@
       
       <!--Contact Person-->
       <ion-label class="label" position="stacked">Main fault Code:</ion-label>
-        <ion-item>
-          <ion-label>Fault Code</ion-label>
-          <ion-select interface="popover" multiple="true" cancelText="Cancel" okText="Okay">
-            <ion-select-option value="bacon">Not an Equip Failure External</ion-select-option>
-            <ion-select-option value="olives">Operator Error Caused Failure</ion-select-option>
-            <ion-select-option value="xcheese">Installation Commisioning</ion-select-option>
-            <ion-select-option value="peppers">Preventative Maintenance</ion-select-option>
-            <ion-select-option value="mushrooms">Gas Component Failure</ion-select-option>
-            <ion-select-option value="mushrooms">Mechanical Component Failure</ion-select-option>
-            <ion-select-option value="mushrooms">Electrical Failure</ion-select-option>
-            <ion-select-option value="mushrooms">Water Quality Issue</ion-select-option>
-            <ion-select-option value="mushrooms">Staff Abuse Caused Failure</ion-select-option>
+        <ion-item >
+         
+          <ion-select interface="popover" multiple="false" cancelText="Cancel" okText="Okay">
+           <ion-select-option *ngFor="let data of datauser" >{{data.email}}</ion-select-option>
           </ion-select>
         </ion-item> 
      
@@ -313,6 +302,9 @@
   
     <ion-card-content>
       <!--Customer Name-->
+
+      <img src='{{ signatureImg }}' />
+
       <ion-label class="label" position="stacked">Customer Name</ion-label>  
       <ion-item>
         <ion-grid>
