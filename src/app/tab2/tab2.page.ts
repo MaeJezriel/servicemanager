@@ -26,7 +26,7 @@ export class Tab2Page implements OnInit {
 
   //api
   datauser: any;
-
+  mainfault: any;
 
   @ViewChild("SwipedSliderContainer", { static: true })
   public SwipedSliderContainer: IonSlides;
@@ -42,7 +42,7 @@ export class Tab2Page implements OnInit {
     // slider.slideTo(newtab);
   }
 
-  //dismiss
+  //Dismiss Btn
   public dismiss(): void {
     this.modalCtrl.dismiss();
  }
@@ -53,7 +53,6 @@ export class Tab2Page implements OnInit {
     
     console.log(event);
   }
-
 
   //Cleaning
   public async cleaning() {
@@ -91,10 +90,11 @@ export class Tab2Page implements OnInit {
       return await modal.present();
     }
 
-  //Image
+  //Get Function
   async ngOnInit() {
     await this.photoService.loadSaved();
     this.getDataUser();
+    this.getMainfaultCode();
   }
 
   public async showActionSheet(photo: UserPhoto, position: number) {
@@ -118,17 +118,26 @@ export class Tab2Page implements OnInit {
     });
     await actionSheet.present();
   }
-
-
-
-
-//api
-async getDataUser() {
-  await this.api.getDataUser()
+  
+  //API
+  async getDataUser() {
+    await this.api.getDataUser()
     .subscribe(res => {
       console.log(res);
       this.datauser = res.results;
       console.log(this.datauser);
+    }, err => {
+      console.log(err);
+    });
+  }
+
+  //GET DATA MAINFAULT CODE
+  async getMainfaultCode() {
+    await this.api.getMainfaultCode()
+    .subscribe(res => {
+      console.log(res);
+      this.mainfault = res.results;
+      console.log(this.mainfault);
     }, err => {
       console.log(err);
     });

@@ -10,6 +10,9 @@ const httpOptions = {
 };
 
 const apiUrl = "https://randomuser.me/api/?results=10";
+//const apiUrl = 'https://connect.dunbraegroup.com/api/service-manager/main-fault-code';
+
+
 
 @Injectable({
   providedIn: 'root'
@@ -36,16 +39,15 @@ export class ApiService {
   return body || { };
   }
 
-
-
   getDataUser(): Observable<any>{
     return this.http.get(apiUrl, httpOptions).pipe(
       map(this.extractData),
       catchError(this.handlerError));
     }
     
-
-    
-
-    
+  getMainfaultCode(): Observable<any>{
+    return this.http.get('https://connect.dunbraegroup.com/api/service-manager/main-fault-code').pipe(
+      map(this.extractData),
+      catchError(this.handlerError));
+    }
 }

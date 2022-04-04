@@ -12,6 +12,11 @@
 </ion-header>
 
 <ion-content>
+
+  <div>
+    <img class="img1" src="/assets/icon/technician1.svg" alt="Rectangle-219-1" border="0">
+  </div>
+
   <!--Legends-->
   <div class="legend" horizontal="end">
     <div class="badge">
@@ -22,23 +27,25 @@
 
   <!--Date Info-->
   <div class="header">
-    <h3><span>7</span> Assigned Jobs</h3>
+    <h3><span>4</span> Assigned Jobs</h3>
+    <h3 class="today">TODAY</h3>
     
-   <h1><ion-datetime [(ngModel)]="date"
-    displayFormat="DD" readonly>
+    <h1><ion-datetime [(ngModel)]="date"
+      displayFormat="DD" readonly>
     </ion-datetime></h1>
+    
     <h2><ion-datetime [(ngModel)]="dates"
     displayFormat="DDD" readonly></ion-datetime></h2> 
     </div>
 
-  <section no-padding>
-    <!--<header>Default Size</header>-->
-    <!-- <ion-button expand="full" no-margin>List</ion-button> -->
-    <!-- <ion-button expand="full" class="btn-month" no-margin (click)="month()">Month</ion-button> -->
-    <!-- <ion-button expand="full" class="btn-month" no-margin routerLink="/month">Month</ion-button>
+  <!-- <section no-padding>
+    <header>Default Size</header>
+    <ion-button expand="full" no-margin>List</ion-button>
+    <ion-button expand="full" class="btn-month" no-margin (click)="month()">Month</ion-button>
+    <ion-button expand="full" class="btn-month" no-margin routerLink="/month">Month</ion-button>
     <ion-button expand="full" class="btn-month" no-margin>Week</ion-button>
-    <ion-button expand="full" class="btn-month" no-margin>Day</ion-button> -->
-  </section>
+    <ion-button expand="full" class="btn-month" no-margin>Day</ion-button>
+  </section> -->
 
   <div class="container">
     <!--List View of Jobs-->
@@ -64,8 +71,8 @@
           <ion-icon class="icon-violet" name="ellipse"></ion-icon>
           <ion-col size="9">
             <ion-label>
-              <h4>Manila</h4>
-              <h6>Coffee Maker</h6>
+              <h4>Metro Manila</h4>
+              <h6>Coffee Maker Equipment</h6>
               <h3>11:30-12:30pm</h3>
             </ion-label>
           </ion-col>
@@ -80,8 +87,8 @@
           <ion-icon class="icon-success" name="ellipse"></ion-icon>
           <ion-col size="9">
             <ion-label>
-              <h4>Lunch with Mae</h4>
-              <h6>Pantry at Subic Bay Inc.</h6>
+              <h4>Dunbrae Warehouse</h4>
+              <h6>Water Cleaning Equipment</h6>
               <h3>11:30-12:30pm</h3>
             </ion-label>
           </ion-col>
@@ -96,31 +103,14 @@
           <ion-icon class="icon-violet" name="ellipse"></ion-icon>
           <ion-col size="9">
             <ion-label>
-              <h4>Resorts World Manila</h4>
-              <h6>Preventive Maintenance.</h6>
+              <h4>Subic Castillejos</h4>
+              <h6>Installation Commission</h6>
               <h3>11:30-12:30pm</h3>
             </ion-label>
           </ion-col>
           <ion-icon name="person" (click)="openJobSummary()"></ion-icon>
         </ion-row>
       </ion-grid>
-    </ion-item>
-
-    <ion-item>
-      <ion-grid>
-        <ion-row class="ion-align-items-center">
-          <ion-icon class="icon-success" name="ellipse"></ion-icon>
-          <ion-col size="9">
-            <ion-label>
-              <h4>Resorts World Manila</h4>
-              <h6>Preventive Maintenance.</h6>
-              <h3>11:30-12:30pm</h3>
-            </ion-label>
-          </ion-col>
-          <ion-icon name="person" (click)="openJobSummary()"></ion-icon>
-        </ion-row>
-      </ion-grid>
-    </ion-item>
-    
+    </ion-item>  
   </div>
 </ion-content>
