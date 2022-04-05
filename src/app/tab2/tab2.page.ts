@@ -136,7 +136,7 @@ export class Tab2Page implements OnInit {
     await this.api.getMainfaultCode()
     .subscribe(res => {
       console.log(res);
-      this.mainfault = res.results;
+      this.mainfault = res.data;
       console.log(this.mainfault);
     }, err => {
       console.log(err);

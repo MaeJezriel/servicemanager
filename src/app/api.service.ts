@@ -10,9 +10,7 @@ const httpOptions = {
 };
 
 const apiUrl = "https://randomuser.me/api/?results=10";
-//const apiUrl = 'https://connect.dunbraegroup.com/api/service-manager/main-fault-code';
-
-
+//const apiUrl = 'https://connect.dunbraegroup.com/api/service-manager/main-fault-code/?data=1';
 
 @Injectable({
   providedIn: 'root'
