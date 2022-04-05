@@ -16,7 +16,7 @@ ion-title {
 ion-card {
   margin: 30px 25px 0px 25px;
   border-radius: 15px;
-  // border: 2px solid var(--blue-green);
+  border: 2px solid var(--black-gray);
   background: var(--light-gray);
 }
 
@@ -25,12 +25,7 @@ p{
     // font-weight: bold;
     font-size: 13px;
     color: var(--black-gray);
-
-    .span{
-        font-weight: normal;
-        font-size: 15px;
-        color: var(--black-gray);
-    }
+    line-height: 1.7em;
 }
 
 .back{

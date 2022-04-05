@@ -13,7 +13,7 @@ export class SignaturePage implements OnInit,  AfterViewInit {
   signatureImg : string;
   signaturePadOptions: Object = { 
     'minWidth': 5,
-    'canvasWidth': 500,
+    'canvasWidth': 330,
     'canvasHeight': 300
   };
   constructor(private modalCtrl: ModalController) { }
