@@ -199,9 +199,42 @@ ion-badge {
 .img1 {
   margin-top: 20px;
   margin-right: 10px;
-  width: 40%;
+  width: 30%;
   height: 20%;
   float: right;
   z-index: -1;
   white-space: nowrap;
+}
+
+//Responsivenes of Image
+@media(max-width: 991px) {
+  .img1 {
+    margin-right: 10px;
+    width: 40%;
+    height: 20%;
+  }
+}
+
+@media(max-width: 767px) {
+  .img1 {
+    margin-right: 10px;
+    width: 40%;
+    height: 20%;
+  }
+}
+
+@media(max-width: 500px) {
+  .img1 {
+    margin-right: 10px;
+    width: 40%;
+    height: 20%;
+  }
+}
+
+@media(max-width: 1920px) {
+  .img1 {
+    margin-right: 10px;
+    width: 40%;
+    height: 20%;
+  }
 }

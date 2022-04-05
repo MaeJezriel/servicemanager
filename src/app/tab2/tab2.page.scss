@@ -17,6 +17,18 @@ ion-icon {
   display: block;
 }
 
+.icon {
+  font-weight: bold;
+  // text-align: center;
+  font-size: 20px;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+
+}
+
 ion-textarea {
   font-weight: normal;
   color: var(--black-gray);
@@ -298,11 +310,11 @@ h5 {
   text-align: center;
   line-height: 1.4em;
   font-size: 12px;
-  margin-top: 5px;
+  margin-top: 25px;
 }
 
 .row-labels {
-  margin-left: 5px;
+  text-align: center;
 }
 
 //Responsivenes of Image
