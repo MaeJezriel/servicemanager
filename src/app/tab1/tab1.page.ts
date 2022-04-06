@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { ApiService } from '../api.service';
 import { Tab2Page } from '../tab2/tab2.page';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-tab1',
@@ -10,17 +11,25 @@ import { Tab2Page } from '../tab2/tab2.page';
 })
 export class Tab1Page {
 
-    //api
-    datauser: any;
-
-
+  //login
+  user = null;
+ 
   constructor(private modalCtrl: ModalController, private modalController: ModalController,
-    public api: ApiService) {}
+    public api: ApiService, private auth: AuthService) {}
 
   public date:any = new Date().toISOString();
   public dates:any = new Date().toISOString();
 
   now = new Date();
+
+  //login
+  ionViewWillEnter() {
+    this.user = this.auth.getUser();
+  }
+ 
+  logout() {
+    this.auth.logout();
+  }
   
   ngOnInit() { }
 

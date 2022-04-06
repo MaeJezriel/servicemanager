@@ -1,14 +1,22 @@
 import { Component } from '@angular/core';
-import { SplashScreen } from '@capacitor/splash-screen'
+import { SplashScreen } from '@capacitor/splash-screen';
+import { Storage } from '@ionic/storage-angular';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss']
 })
 export class AppComponent {
-  constructor() {
+  constructor(private storage: Storage) {
     this.initializeApp();
   }
+
+  async ngOnInit() {
+    // If using a custom driver:
+    // await this.storage.defineDriver(MyCustomDriver)
+    await this.storage.create();
+  }
+  
 
   initializeApp() {
     /* To make sure we provide the fastest app loading experience
