@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ModalController } from '@ionic/angular';
+import { Router } from '@angular/router';
+import { ModalController, ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-cleaning',
@@ -8,7 +9,24 @@ import { ModalController } from '@ionic/angular';
 })
 export class CleaningPage implements OnInit {
 
-  constructor(private modalCtrl: ModalController) {}
+  constructor(private modalCtrl: ModalController, 
+    private router: Router,
+    private toastCtrl: ToastController, ) {}
+
+  //toastcontroller
+  async presentToast() {
+    let toast =  this.toastCtrl.create({
+      message: 'Successfully Created',
+      duration: 3000,
+      position: 'top'
+    });
+  
+   (await toast).onDidDismiss().then(() => {
+    this.router.navigate(['/members/tab1']);
+    });
+    
+    (await toast).present();
+  }
 
   //Grouphead
   groupheads = [{

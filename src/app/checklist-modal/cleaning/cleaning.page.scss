@@ -53,3 +53,14 @@ ion-checkbox {
   margin-top: 40px;
   box-shadow: none;
 }
+
+.clean-btn {
+  --background: var(--dark-blue);
+  color: var(--white);
+  font-family: var(--body-font);
+  text-align: center;
+  margin-top: 20px;
+  width: 80%;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
