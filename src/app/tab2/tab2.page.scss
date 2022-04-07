@@ -31,6 +31,7 @@ ion-icon {
 
 ion-textarea {
   // --placeholder-color: var(--black-gray) !important;
+  --placeholder-opacity: 70%;
   font-weight: normal;
   color: var(--black-gray) !important;
   font-size: 13px;
@@ -129,7 +130,8 @@ ion-badge{
 
 .green-badge {
   color: #2b9e4e;
-  background: #4ae779;
+  background: #5eff8e;
+  border: 1px solid #2b9e4e;
   font-family: var(--body-font);
   width: 20%;
   height: 20%;
@@ -138,6 +140,7 @@ ion-badge{
 .red-badge {
   color: #bb1b30;
   background: #f07485;
+  border: 1px solid #bb1b30;
   font-family: var(--body-font);
   width: 20%;
   height: 20%;
@@ -206,7 +209,6 @@ h3 {
 }
 
 // FOR SEGMENTS
-
 ion-label{
   color:#003C77;
   font-weight: 700;
@@ -227,7 +229,7 @@ ion-item {
   color: #000000;
   font-weight: 600;
   background: var(--white);
-  border: 2px solid var(--dark-blue);
+  border: 1px solid var(--dark-blue);
 }
 
 .text-area {
@@ -295,7 +297,7 @@ ion-img {
 }
 
 .btnstart{
-  font-family: 'Poppins';
+  font-family: var(--body-font);
   color: #ffffff;
   font-weight: 700;
   --background: #30B2EA;
@@ -305,10 +307,10 @@ ion-img {
 }
 
 .btncom{
-  font-family: 'Poppins';
+  font-family: var(--body-font);
   color: #ffffff;
   font-weight: 700;
-  --background: #000000;
+  --background: var(--black-gray);
   border-radius: 20px;
   font-size: 12px;
 }
@@ -550,7 +552,7 @@ ion-card-title {
   padding: 5px;
   border-radius: 15px;
   background-color: var(--light-gray);
-  border: 2px solid var(--dark-blue);
+  border: 1px solid var(--dark-blue);
 }
 
 .badge-history {

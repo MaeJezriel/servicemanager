@@ -1,5 +1,5 @@
 * {
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--body-font);
 }
 
 ion-header,
@@ -16,13 +16,13 @@ ion-icon {
 }
 
 ion-title {
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--body-font);
   color: var(--white);
   font-weight: 500;
 }
 
 ion-content {
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--body-font);
 }
 
 ion-card-title{
@@ -46,7 +46,7 @@ ion-button {
   border-style: none;
   border-style: none;
   border-radius: 0%;
-  width: 23%;
+  // width: 23%;
   display: inline-block;
 }
 
@@ -61,6 +61,51 @@ section:not(.full-width),
   padding: 0 10px;
 }
 
+ion-col > div {
+  background-color: var(--light-gray);
+  border: solid 1px #ddd;
+  padding: 7px;
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  margin-top: -20px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.assigned {
+  font-family: var(--body-font);
+  font-weight: bold;
+  background-color: var(--light-gray);
+  color: var(--dark-pink);
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.assigned:active {
+  font-weight: bold;
+  color: var(--dark-pink);
+  cursor: pointer;
+  border: solid 1px var(--dark-pink);
+}
+
+.completed {
+  font-family: var(--body-font);
+  background-color: var(--light-gray);
+  color: var(--green-success);
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.completed:active {
+  font-weight: bold;
+  color: var(--green-success);
+  cursor: pointer;
+  border: solid 1px var(--green-success);
+}
+
 .btn-month {
   color: #3699FF;
   --background: #E1F0FF;
@@ -73,13 +118,13 @@ section:not(.full-width),
 
 .icon-violet{
   color: var(--dark-pink);
-  font-size: 20px;
+  font-size: 15px;
   margin-left: 0px;
 }
 
 .icon-success{
   color: var(--green-success);
-  font-size: 20px;
+  font-size: 15px;
   margin-left: 0px;
 }
 
@@ -92,7 +137,7 @@ section:not(.full-width),
   }
 
   h1{
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--body-font);
     color: var(--dark-blue);
     font-weight: bold;
     font-size: 45px;
@@ -101,7 +146,7 @@ section:not(.full-width),
   }
   
   h2{
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--body-font);
     color: var(--gray);
     font-weight: bold;
     font-size: 25px;
@@ -116,7 +161,7 @@ section:not(.full-width),
   }
 
   .today {
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--body-font);
     margin-top: 25px;
     margin-bottom: 0;
     font-weight: bold;
@@ -136,11 +181,14 @@ section:not(.full-width),
     background: none;
     padding: 0;
     margin: 14px 0;
-    border-radius: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
     color: #000000;
     font-weight: 600;
     background: var(--white);
-    border: 2px solid var(--black-gray);
+    border: 1px solid var(--black-gray);
 
     ion-label {
       padding: 0px 0;
@@ -152,6 +200,7 @@ section:not(.full-width),
         color: var(--dark-blue);
         white-space: initial;
       }
+      
       h6, h3 {
         color: var(--black-gray);
         margin-left: 10px;

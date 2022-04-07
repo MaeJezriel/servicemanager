@@ -13,32 +13,44 @@
 
 <ion-content>
 
-  <div class="text-center">
-    <div>
-      <img class="img1" src="/assets/icon/technician1.svg" alt="Rectangle-219-1" border="0">
-    </div>
-  
-    <!--Legends-->
-    <div class="legend" horizontal="end">
-      <div class="badge">
-        <ion-badge class="badge-assigned">Assigned</ion-badge>&nbsp;
-        <ion-badge color="success">Completed</ion-badge>
-      </div>
-    </div>
-  
-    <!--Date Info-->
-    <div class="header">
-      <h3><span>4</span> Assigned Jobs</h3>
-      <h3 class="today">TODAY</h3>
-      
-      <h1><ion-datetime [(ngModel)]="date"
-        displayFormat="DD" readonly>
-      </ion-datetime></h1>
-      
-      <h2><ion-datetime [(ngModel)]="dates"
-      displayFormat="DDD" readonly></ion-datetime></h2> 
+  <!-- <div class="text-center">
+  </div> -->
+
+  <div>
+    <img class="img1" src="/assets/icon/technician1.svg" alt="Rectangle-219-1" border="0">
+  </div>
+
+  <!--Legends-->
+  <div class="legend" horizontal="end">
+    <div class="badge">
+      <ion-badge class="badge-assigned">Assigned</ion-badge>&nbsp;
+      <ion-badge color="success">Completed</ion-badge>
     </div>
   </div>
+
+  <!--Date Info-->
+  <div class="header">
+    <h3><span>3</span> Assigned Jobs</h3>
+    <h3 class="today">TODAY</h3>
+    
+    <h1><ion-datetime [(ngModel)]="date"
+      displayFormat="DD" readonly>
+    </ion-datetime></h1>
+    
+    <h2><ion-datetime [(ngModel)]="dates"
+    displayFormat="DDD" readonly></ion-datetime></h2> 
+  </div>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div class="assigned">Assigned</div>
+      </ion-col>
+      <ion-col>
+        <div class="completed">Completed</div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
   <!-- <section no-padding>
     <header>Default Size</header>
@@ -58,7 +70,7 @@
           <ion-col size="9">
             <ion-label>
               <h4>Resorts World Manila</h4>
-              <h6>Preventive Maintenance.</h6>
+              <h6>Preventive Maintenance</h6>
               <h3>11:30-12:30pm</h3>
             </ion-label>
           </ion-col>
@@ -83,7 +95,7 @@
       </ion-grid>
     </ion-item>
 
-    <ion-item>
+    <!-- <ion-item>
       <ion-grid>
         <ion-row class="ion-align-items-center">
           <ion-icon class="icon-success" name="ellipse"></ion-icon>
@@ -97,7 +109,7 @@
           <ion-icon name="person" (click)="openJobSummary()"></ion-icon>
         </ion-row>
       </ion-grid>
-    </ion-item>
+    </ion-item> -->
 
     <ion-item>
       <ion-grid>
