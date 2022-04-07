@@ -30,9 +30,10 @@ ion-icon {
 }
 
 ion-textarea {
+  // --placeholder-color: var(--black-gray) !important;
   font-weight: normal;
-  color: var(--black-gray);
-  font-size: 14px;
+  color: var(--black-gray) !important;
+  font-size: 13px;
 
   ion-input {
     font-weight: normal;
@@ -227,6 +228,17 @@ ion-item {
   font-weight: 600;
   background: var(--white);
   border: 2px solid var(--dark-blue);
+}
+
+.text-area {
+  background: var(--white);
+  border: 2px solid var(--dark-blue);
+  box-sizing: border-box;
+  height: 120px !important;
+  // margin: 25px 20px 15px 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  text-align: left;
 }
 
 .list-history {

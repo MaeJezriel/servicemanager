@@ -236,3 +236,13 @@ ion-badge {
     height: 20%;
   }
 }
+
+.text-center {
+  min-height: 35%;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: var(--light-gray) !important;
+  // padding-bottom: 30px;
+  padding-top: 30px;
+  margin-top: -20px;
+}
