@@ -10,12 +10,14 @@
         <div class="card">
           <ion-item class="error-message-spacer">
             <ion-icon name="mail-outline"></ion-icon>
-            <ion-input  type="email" placeholder="Email" name="email" [(ngModel)]="credentials.email"></ion-input>
+            <!--<ion-input  type="email" placeholder="Email" name="email" [(ngModel)]="credentials.email"></ion-input>-->
+            <ion-input  type="email" placeholder="Email" name="email" ></ion-input>
           </ion-item>
                   
           <ion-item class="error-message-spacer">
             <ion-icon name="lock-closed-outline"></ion-icon>
-            <ion-input type="password" placeholder="Password" name="password" [(ngModel)]="credentials.pw" required></ion-input>
+            <ion-input type="password" placeholder="Password" name="password" required></ion-input>
+            <!--<ion-input type="password" placeholder="Password" name="password" [(ngModel)]="credentials.pw" required></ion-input>-->
           </ion-item>
 
           <div>
@@ -24,7 +26,7 @@
             
           <div>
             <!-- <ion-button size="large" expand="block" shape="round" type="submit" (click)="login()">LOGIN</ion-button> -->
-            <ion-button size="large" expand="block" shape="round" type="submit" (click)="login()">LOGIN</ion-button>
+            <ion-button size="large" expand="block" shape="round" type="submit" routerLink="/members/tab1">LOGIN</ion-button>
           </div>
           
         </div>
