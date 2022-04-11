@@ -133,8 +133,9 @@ ion-badge{
   background: #5eff8e;
   border: 1px solid #2b9e4e;
   font-family: var(--body-font);
+  display: inline-block;
+  vertical-align: middle;
   width: 20%;
-  height: 20%;
 }
 
 .red-badge {
@@ -142,8 +143,9 @@ ion-badge{
   background: #f07485;
   border: 1px solid #bb1b30;
   font-family: var(--body-font);
+  display: inline-block;
+  vertical-align: middle;
   width: 20%;
-  height: 20%;
 }
 
 .icon-img{
@@ -163,11 +165,12 @@ ion-badge{
   margin-top: -10px;
   color: var(--black-gray);
   padding: 0;
+  display: inline-block;
+  vertical-align: middle;
   text-align: center;
   white-space: initial;
   font-family: var(--body-font);
 }
-
 
 h6 {
   font-weight: 400;
@@ -177,7 +180,7 @@ h6 {
   white-space: initial;
   font-family: var(--body-font);
   padding: 0;
-  margin-top: -10px;
+  margin-top: -5px;
 }
 
 h3 {
@@ -197,7 +200,6 @@ h3 {
   white-space: initial;
   font-family: var(--body-font);
 }
-
 
 .icon-small{
   color: gray;
@@ -230,6 +232,19 @@ ion-item {
   font-weight: 600;
   background: var(--white);
   border: 1px solid var(--dark-blue);
+}
+
+.title-history {
+  background: none;
+  --background: var(--dark-blue) !important;
+  padding: 0;
+}
+
+.title-job-header {
+  text-align: center;
+  margin-left: 15%;
+  margin-right: 15%;
+  align-items: center;
 }
 
 .text-area {
@@ -310,7 +325,7 @@ ion-img {
   font-family: var(--body-font);
   color: #ffffff;
   font-weight: 700;
-  --background: var(--black-gray);
+  --background: #000;
   border-radius: 20px;
   font-size: 12px;
 }
@@ -530,6 +545,26 @@ hr{
 
 ion-card-title {
   color: var(--white);
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Title in History Card */
+.text {
+  color: var(--white);
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 20px;
+}
+
+/* Title in Job Header */
+.text-header {
+  color: var(--black-gray);
+  display: inline-block;
+  vertical-align: middle;
+  align-items: center;
+  text-align: center;
+  font-size: 20px;
 }
 
 .title-checklist{
@@ -558,6 +593,8 @@ ion-card-title {
 .badge-history {
   font-family: var(--body-font);
   font-weight: normal;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .p-history {
@@ -687,3 +724,51 @@ canvas {
   width: 100%;
   margin-bottom: 20px;
 }
+
+//STYLING ION-SELECT, ION-SELECT-OPTIONS
+ion-select {
+  /* Applies to the value and placeholder color */
+  color: #545ca7;
+
+  /* Set a different placeholder color */
+  --placeholder-color: #971e49;
+
+  /* Set full opacity on the placeholder */
+  --placeholder-opacity: 1;
+}
+
+/* Set the flex in order to size the text width to its content */
+ion-select::part(placeholder),
+ion-select::part(text) {
+  flex: 0 0 auto;
+}
+
+/* Set the placeholder color and opacity */
+ion-select::part(placeholder) {
+  color: var(--dark-blue);
+  font-weight: normal;
+  font-size: 14px;
+  opacity: 1;
+}
+
+/*
+ * Set the font of the first letter of the placeholder
+ * Shadow parts work with pseudo-elements, too!
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements
+ */
+
+/* Set the text color */
+ion-select::part(text) {
+  color: #545ca7;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* Set the icon color and opacity */
+ion-select::part(icon) {
+  color: var(--dark-blue);
+  opacity: 1;
+}
+
+/* Ion-select-items scss */
+ion-alert div[class='alert-radio-label'] { background-color: red; }

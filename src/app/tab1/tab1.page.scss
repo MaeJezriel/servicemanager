@@ -19,6 +19,7 @@ ion-title {
   font-family: var(--body-font);
   color: var(--white);
   font-weight: 500;
+  font-size: large;
 }
 
 ion-content {
@@ -70,7 +71,7 @@ ion-col > div {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 20px;
-  margin-top: -20px;
+  margin-top: -10px;
   align-items: center;
   justify-content: flex-start;
 }
@@ -80,6 +81,7 @@ ion-col > div {
   font-weight: bold;
   background-color: var(--light-gray);
   color: var(--dark-pink);
+  border: solid 1px var(--dark-pink);
   border-radius: 20px;
   cursor: pointer;
 }

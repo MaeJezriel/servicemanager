@@ -2,39 +2,28 @@ ion-header,
 ion-toolbar {
   --background: var(--dark-blue);
 }
-ion-title {
-    font-family: 'Poppins', sans-serif;
-    color: var(--white);
-    font-weight: 500;
-    font-size: 15px;
-  }
 
-  ion-label{
-    font-family: 'Poppins', sans-serif;
-    margin-left: 5%;
-    margin-top: 2%;
+ion-title {
+  font-family: var(--body-font);
+  color: var(--white);
+  font-weight: 500;
+  font-size: 15px;
 }
 
-
-.back{
-    color: var(--white) !important;
-    font-weight: bold;
-    margin-left: 15px;
-    font-size: 20px;
+ion-label{
+  font-family: var(--body-font);
+  margin-left: 5%;
+  margin-top: 2%;
 }
 
 ion-textarea{
-    font-family: 'Poppins', sans-serif;
-    margin-left: 5px;
-}
-
-.gwc {
-  margin-left: 0px;
-  margin-right: 15px;
+  font-family: var(--body-font);
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 ion-checkbox {
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--body-font) !important;
   background: #FFFFFF;
   border-width: 3px !important;
   border-style: solid !important;
@@ -48,6 +37,18 @@ ion-checkbox {
   --border-color: #FFFFFF;
   --border-color-checked :#FFFFFF; 
 }
+
+.back{
+  color: var(--white) !important;
+  font-weight: bold;
+  margin-left: 15px;
+  font-size: 20px;
+}
+
+// .gwc {
+//   margin-left: 0px;
+//   margin-right: 15px;
+// }
 
 .ion-card {
   margin-top: 40px;

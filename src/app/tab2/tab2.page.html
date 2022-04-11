@@ -11,11 +11,10 @@
       <ion-grid>
         <ion-row>
           <ion-col>
-            <ion-label>
-              <h4 class="header-job">JOB #32  
-                <ion-badge class="green-badge">SENT</ion-badge>
-                <ion-badge class="red-badge">HIGH</ion-badge>
-              </h4>
+            <ion-label class="title-job-header">
+              <span class="text-header">JOB #32</span>
+              <ion-badge class="green-badge">SENT</ion-badge>
+              <ion-badge class="red-badge">HIGH</ion-badge>
             </ion-label>
           </ion-col>
         </ion-row>
@@ -178,7 +177,7 @@
       <ion-label class="label" position="stacked">Main fault Code:</ion-label>
         <ion-item >
          
-          <ion-select interface="popover" multiple="false" cancelText="Cancel" okText="Okay">
+          <ion-select placeholder="Select Fault Code" interface="popover" multiple="false" cancelText="Cancel" okText="Okay">
            <ion-select-option *ngFor="let data of mainfault" >{{data.description}}</ion-select-option>
           </ion-select>
         </ion-item> 
@@ -340,9 +339,15 @@
       <div>
         <ion-card class="ion-card-offer">
           <ion-card-header class="offer-bg">
-            <div>
+            <!-- <div>
               <ion-card-title><strong>#10136</strong><ion-badge class="badge-history" color="success"> Completed </ion-badge></ion-card-title>
-            </div>
+            </div> -->
+
+            <ion-label no-lines class="title-history">
+              <span class="text">#10136</span>
+              <ion-badge class="badge-history" color="success"> Completed </ion-badge>
+            </ion-label>
+
           </ion-card-header>
           <ion-card-content class="offer-content">
               <div>
