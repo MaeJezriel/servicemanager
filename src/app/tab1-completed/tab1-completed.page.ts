@@ -1,16 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { ApiService } from '../api.service';
 import { Tab2Page } from '../tab2/tab2.page';
 import { AuthService } from '../services/auth.service';
-import { Tab1CompletedPage } from '../tab1-completed/tab1-completed.page';
+import { Tab1Page } from '../tab1/tab1.page';
 
 @Component({
-  selector: 'app-tab1',
-  templateUrl: 'tab1.page.html',
-  styleUrls: ['tab1.page.scss']
+  selector: 'app-tab1-completed',
+  templateUrl: './tab1-completed.page.html',
+  styleUrls: ['./tab1-completed.page.scss'],
 })
-export class Tab1Page {
+export class Tab1CompletedPage implements OnInit {
 
   //login
   user = null;
@@ -31,17 +31,18 @@ export class Tab1Page {
   logout() {
     this.auth.logout();
   }
-  
-  ngOnInit() { }
 
+  ngOnInit() {
+  }
 
-  // async view() {
-  //   const modal = await this.modalCtrl.create({
-  //     component: JobSummaryPage,
-  //     cssClass: 'my-custom-class'
-  //   });
-  //   return await modal.present();
-  // }
+  //View Details in Assigned Jobs
+  public async openAssignedJobs() {
+    const modal = await this.modalController.create({
+      component: Tab1Page,
+      cssClass: 'my-custom-class'
+    });
+    return await modal.present();
+  }
 
   public async openJobSummary() {
     const modal = await this.modalController.create({
@@ -51,20 +52,4 @@ export class Tab1Page {
     return await modal.present();
   }
 
-  //View Details in Completed Jobs
-  public async openCompletedJobs() {
-    const modal = await this.modalController.create({
-      component: Tab1CompletedPage,
-      cssClass: 'my-custom-class'
-    });
-    return await modal.present();
-  }
-
 }
-
-
-
-
-
-
-

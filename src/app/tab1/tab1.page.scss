@@ -76,6 +76,10 @@ ion-col > div {
   justify-content: flex-start;
 }
 
+ion-col > .assigned {
+  border-color: solid 1px var(--dark-pink);
+}
+
 .assigned {
   font-family: var(--body-font);
   font-weight: bold;
