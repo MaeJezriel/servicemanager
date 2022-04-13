@@ -47,3 +47,23 @@
     display: flex;
     justify-content: center;
   }
+
+  ion-picker > .picker-wrapper {
+    font-family: var(--body-font);
+    background-color: var(--light-blue) !important;
+  }
+
+  .picker-opt {
+    color: #7994A2 !important;
+    font-family: var(--body-font);
+  }
+
+  .picker-opt.picker-opt-selected {
+    font-family: var(--body-font);
+    color: var(--black-gray) !important;
+  }
+
+  ion-datetime {
+    color: var(--black-gray) !important;
+    font-family: var(--body-font);
+  }
