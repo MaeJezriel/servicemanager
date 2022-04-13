@@ -72,11 +72,11 @@
     [(ngModel)]="segmentModel" 
     (ionChange)="segmentChanged($event)">
   
-      <ion-segment-button value="summary">
+      <ion-segment-button value="assigned">
         <ion-label>Assigned</ion-label>
       </ion-segment-button>
   
-      <ion-segment-button value="tech">
+      <ion-segment-button value="completed">
         <ion-label>Completed</ion-label>
       </ion-segment-button>
   
@@ -87,9 +87,7 @@
  
 
 
-    <div class="segment" *ngIf="segmentModel === 'summary'">
-     
-      
+    <div class="segment" *ngIf="segmentModel === 'assigned'">
       <div class="container">
         <!-- List View of Jobs -->
         <ion-item>
@@ -173,7 +171,7 @@
     </div>
     
 
-    <div class="segment" *ngIf="segmentModel === 'tech'">
+    <div class="segment" *ngIf="segmentModel === 'completed'">
     
       <div class="container">
         <!--List View of Jobs-->
