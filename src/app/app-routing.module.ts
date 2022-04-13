@@ -29,9 +29,6 @@ const routes: Routes = [
   {
     path: 'view-details',
     loadChildren: () => import('./history-modal/view-details/view-details.module').then( m => m.ViewDetailsPageModule)
-  },  {
-    path: 'tab1-completed',
-    loadChildren: () => import('./tab1-completed/tab1-completed.module').then( m => m.Tab1CompletedPageModule)
   },
   {
     path: 'startjob-modal',

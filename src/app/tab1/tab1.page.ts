@@ -3,7 +3,6 @@ import { ModalController, IonSlides } from '@ionic/angular';
 import { ApiService } from '../api.service';
 import { Tab2Page } from '../tab2/tab2.page';
 import { AuthService } from '../services/auth.service';
-import { Tab1CompletedPage } from '../tab1-completed/tab1-completed.page';
 
 @Component({
   selector: 'app-tab1',
@@ -73,13 +72,13 @@ export class Tab1Page {
   }
 
   //View Details in Completed Jobs
-  public async openCompletedJobs() {
-    const modal = await this.modalController.create({
-      component: Tab1CompletedPage,
-      cssClass: 'my-custom-class'
-    });
-    return await modal.present();
-  }
+  // public async openCompletedJobs() {
+  //   const modal = await this.modalController.create({
+  //     component: Tab1CompletedPage,
+  //     cssClass: 'my-custom-class'
+  //   });
+  //   return await modal.present();
+  // }
 
 }
 
