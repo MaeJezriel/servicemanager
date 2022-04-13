@@ -7,6 +7,13 @@ ion-toolbar {
   --background: var(--dark-blue);
 }
 
+ion-segment{
+  --background: var(--dark-blue);
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
 ion-icon {
   color: var(--dark-blue);
   font-weight: bold;
@@ -302,4 +309,8 @@ ion-col > .assigned {
   // padding-bottom: 30px;
   padding-top: 30px;
   margin-top: -20px;
+}
+
+.segment {
+  margin-top: 30px;
 }
