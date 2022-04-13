@@ -1,13 +1,11 @@
-// ion-header,
-// ion-toolbar {
-//   //--background: #D0DEEB;
-// }
 * {
   font-family: var(--body-font);
 }
 
 ion-card{
   box-shadow: none;
+  // margin-left: 0px !important;
+  // margin-right: 0px !important;
 }
 
 ion-icon {
@@ -15,18 +13,6 @@ ion-icon {
   margin-left: 40px;
   font-size: 20px;
   display: block;
-}
-
-.icon {
-  font-weight: bold;
-  // text-align: center;
-  font-size: 20px;
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin: 0;
-
 }
 
 ion-textarea {
@@ -53,6 +39,17 @@ ion-segment {
   margin-top: 0%;
 }
 
+.icon {
+  font-weight: bold;
+  // text-align: center;
+  font-size: 20px;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+}
+
 p {
   font-weight: normal;
   color: var(--black-gray);
@@ -65,6 +62,7 @@ p {
   margin-left: 15px;
   font-size: 20px;
 }
+
 .add {
   color: #ffffff !important;
   font-weight: bold;
@@ -114,7 +112,7 @@ ion-label {
     font-weight: 600;
 }
 
-// FOR CARDS
+/* FOR CARDS */
 
 ion-badge{
   margin-left: 2%;
@@ -210,7 +208,7 @@ h3 {
   // margin-top: 20px;
 }
 
-// FOR SEGMENTS
+/* FOR SEGMENTS */
 ion-label{
   color:#003C77;
   font-weight: 700;
@@ -273,7 +271,7 @@ ion-item {
   font-size: 13px; 
 }
 
-// FOR BUTTONS
+/* FOR BUTTONS */
 
 ion-button {
   box-shadow: none !important;
@@ -282,6 +280,15 @@ ion-button {
   border-radius: 0%;
   width: 45%;
   display: inline-block;
+}
+
+ion-img {
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  // margin-top: 30px;
+  // margin-bottom: 20px;
 }
 
 .upload {
@@ -293,15 +300,6 @@ ion-button {
   --background: #30B2EA;
   display: inline-block;
   text-align: center;
-}
-
-ion-img {
-  width: 80%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  // margin-top: 30px;
-  // margin-bottom: 20px;
 }
 
 .icon-btn {
@@ -339,7 +337,7 @@ section:not(.full-width),
   padding: 0 10px;
 }
 
-// FOR LABELS
+/* FOR LABELS */
 h5 {
   text-align: center;
   line-height: 1.4em;
@@ -351,7 +349,7 @@ h5 {
   text-align: center;
 }
 
-//Responsivenes of Image
+/* RESPONSIVENESS OF IMAGE */
 @media(max-width: 991px) {
   .icon-img {
     border-radius: 10px;
@@ -385,7 +383,18 @@ h5 {
   }
 }
 
-//PHOTO/CUSTOMER
+/* RESPONSIVENESS OF BADGE */
+@media(max-width: 320px) {
+  
+  .title-job-header {
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    align-items: center;
+  }
+}
+
+/* PHOTO / CUSTOMER */
 .remarks {
   background: none;
   padding: 0;
@@ -439,7 +448,7 @@ h5 {
   margin-top: -10px;
 }
 
-//hr Class
+/* HR CLASS */
 hr{
   border: 0;
   height: 1.5px;
@@ -450,20 +459,6 @@ hr{
   
   &.center-ball{
     background: var(--black-gray);
-    
-    // &:before{
-    //   content: "";
-    //   width: 90px;
-    //   height: 90px;
-    //   background: var(--black-gray);
-    //   display: inline-block;
-    //   border: 2px solid var(--black-gray);
-    //   border-radius: 50%;
-    //   position: absolute;
-    //   top: -4px;
-    //   left: 45%;
-    //   margin: 0 0 0 -3px;
-    // }
   }
 }
 
@@ -505,8 +500,8 @@ hr{
 //   width: 40%;
 //   height: 20%;
 
-//CHECKLIST
-.add{
+/* CHECKLIST */
+.add {
   --color: var(--black-gray);
     font-weight: bold;
     font-size: 20px;
@@ -520,7 +515,7 @@ hr{
   white-space: initial;
 }
 
-//HISTORY
+/* HISTORY */
 .card-jeep {
   margin: 30px 20px 0px 20px;
   padding: 8px;
@@ -549,7 +544,7 @@ ion-card-title {
   vertical-align: middle;
 }
 
-/* Title in History Card */
+/* TITLE IN HISTORY CARD*/
 .text {
   color: var(--white);
   display: inline-block;
@@ -557,7 +552,7 @@ ion-card-title {
   font-size: 20px;
 }
 
-/* Title in Job Header */
+/* TITLE IN JOB HEADER */
 .text-header {
   color: var(--black-gray);
   display: inline-block;
@@ -697,7 +692,7 @@ ion-list-header {
   padding: 5px 0;
 }
 
-//SIGNATURE
+/* SIGNATURE */
 canvas {
   display: block;
   box-shadow: 0 0 5px 1px #999;
@@ -725,7 +720,7 @@ canvas {
   margin-bottom: 20px;
 }
 
-//STYLING ION-SELECT, ION-SELECT-OPTIONS
+/* STYLING ION-SELECT, ION-SELECT-OPTIONS */
 ion-select {
   /* Applies to the value and placeholder color */
   color: #545ca7;
@@ -750,12 +745,6 @@ ion-select::part(placeholder) {
   font-size: 14px;
   opacity: 1;
 }
-
-/*
- * Set the font of the first letter of the placeholder
- * Shadow parts work with pseudo-elements, too!
- * https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements
- */
 
 /* Set the text color */
 ion-select::part(text) {

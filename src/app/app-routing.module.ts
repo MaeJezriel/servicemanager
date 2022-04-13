@@ -33,6 +33,10 @@ const routes: Routes = [
     path: 'tab1-completed',
     loadChildren: () => import('./tab1-completed/tab1-completed.module').then( m => m.Tab1CompletedPageModule)
   },
+  {
+    path: 'startjob-modal',
+    loadChildren: () => import('./startjob-modal/startjob-modal.module').then( m => m.StartjobModalPageModule)
+  },
 
 
   

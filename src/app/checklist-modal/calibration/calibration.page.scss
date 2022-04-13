@@ -2,44 +2,52 @@ ion-header,
 ion-toolbar {
   --background: var(--dark-blue);
 }
+
 ion-title {
   font-family: var(--body-font);
-    color: var(--white);
-    font-weight: 500;
-    font-size: 15px;
-  }
-
-  ion-label{
-    font-family: var(--body-font);
-    margin-left: 5%;
-    margin-top: 2%;
-    margin-bottom: 3%;
-    font-weight: 700;
-    color: var(--dark-blue);
+  color: var(--white);
+  font-weight: 500;
+  font-size: 15px;
 }
 
-
-.back{
-    color: var(--white) !important;
-    font-weight: bold;
-    margin-left: 15px;
-    font-size: 20px;
+ion-label{
+  font-family: var(--body-font);
+  margin-left: 5%;
+  margin-top: 2%;
+  margin-bottom: 3%;
+  font-weight: 700;
+  color: var(--dark-blue);
 }
-
 
 ion-input, ion-textarea{
   font-family: var(--body-font);
-    margin-left: 20px;
-    background-color: #E7E5E5;
-    border-radius: 5px;
-    width: 90%;
-    margin-bottom: 7%;
+  margin-left: 20px;
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  width: 90%;
+  margin-bottom: 7%;
+}
+
+.back{
+  color: var(--white) !important;
+  font-weight: bold;
+  margin-left: 15px;
+  font-size: 20px;
 }
 
 .label{
-    margin-left: 15px;
-    color: black;
-    font-weight: 500;
-    font-size: 12px;
-    margin-top: 4%;
+  margin-left: 10px;
+  color: black;
+  font-weight: 500;
+  font-size: 12px;
+  margin-top: 4%;
+}
+
+.label-unit {
+  margin-left: 10px;
+  color: black;
+  font-weight: 500;
+  font-size: 12px;
+  margin-bottom: 3%;
+  margin-top: 4%;
 }

@@ -11,13 +11,14 @@ ion-title {
 }
 
 ion-label{
-  font-family: var(--body-font);
+  font-family: var(--body-font) !important;
   margin-left: 5%;
   margin-top: 2%;
 }
 
 ion-textarea{
   font-family: var(--body-font);
+  font-style: italic;
   margin-left: 5px;
   margin-right: 5px;
 }
@@ -33,9 +34,14 @@ ion-checkbox {
   --width: 30px;
   --checkmark-color: var(--dark-blue);
   --checkmark-weight: bold;
-  --background-checked: #FFFFFF;
-  --border-color: #FFFFFF;
-  --border-color-checked :#FFFFFF; 
+  --background-checked: var(--white);
+  --border-color: var(--white);
+  --border-color-checked:var(--white); 
+}
+
+ion-item {
+  font-family: var(--body-font) !important;
+  color: var(--dark-blue);
 }
 
 .back{

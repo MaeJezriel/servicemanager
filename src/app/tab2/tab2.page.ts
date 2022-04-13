@@ -6,8 +6,12 @@ import { CalibrationPage } from '../checklist-modal/calibration/calibration.page
 import { CleaningPage } from '../checklist-modal/cleaning/cleaning.page';
 import { SignaturePage } from '../customer-modal/signature/signature.page';
 import { ViewDetailsPage } from '../history-modal/view-details/view-details.page';
+import { StartjobModalPage } from '../startjob-modal/startjob-modal.page';
 import { UserPhoto, PhotoService } from '../services/photo.service';
 import { Router } from '@angular/router';
+
+
+
 @Component({
   selector: 'app-tab2',
   templateUrl: 'tab2.page.html',
@@ -98,14 +102,23 @@ export class Tab2Page implements OnInit {
       return await modal.present();
     }
 
+  //Start Job Button
+  public async startJob() {
+    const modal = await this.modalCtrl.create({
+      component: StartjobModalPage,
+      cssClass: 'my-custom-class'
+     });
+     return await modal.present();
+  }
+
   //View Details in History Page
-    public async historydetails() {
-      const modal = await this.modalCtrl.create({
-        component: ViewDetailsPage,
-        cssClass: 'my-custom-class'
-      });
-      return await modal.present();
-    }
+  public async historydetails() {
+    const modal = await this.modalCtrl.create({
+      component: ViewDetailsPage,
+      cssClass: 'my-custom-class'
+    });
+    return await modal.present();
+  }
 
   //Get Function
   async ngOnInit() {

@@ -62,56 +62,6 @@ section:not(.full-width),
   padding: 0 10px;
 }
 
-ion-col > div {
-  background-color: var(--light-gray);
-  border: solid 1px #ddd;
-  padding: 7px;
-  width: 100%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 20px;
-  margin-top: -10px;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-ion-col > .assigned {
-  border-color: solid 1px var(--dark-pink);
-}
-
-.assigned {
-  font-family: var(--body-font);
-  font-weight: bold;
-  background-color: var(--light-gray);
-  color: var(--dark-pink);
-  border: solid 1px var(--dark-pink);
-  border-radius: 20px;
-  cursor: pointer;
-}
-
-.assigned:active {
-  font-weight: bold;
-  color: var(--dark-pink);
-  cursor: pointer;
-  border: solid 1px var(--dark-pink);
-}
-
-.completed {
-  font-family: var(--body-font);
-  background-color: var(--light-gray);
-  color: var(--green-success);
-  border-radius: 20px;
-  cursor: pointer;
-}
-
-.completed:active {
-  font-weight: bold;
-  color: var(--green-success);
-  cursor: pointer;
-  border: solid 1px var(--green-success);
-}
-
 .btn-month {
   color: #3699FF;
   --background: #E1F0FF;
@@ -174,6 +124,7 @@ ion-col > .assigned {
   }
 }
 
+/* CARDS FOR LIST OF JOBS*/
 .container {
   margin-top: -30px;
   padding: 6px 20px;
@@ -259,7 +210,58 @@ ion-badge {
   white-space: nowrap;
 }
 
-//Responsivenes of Image
+/* BUTTONS FOR ASSIGNED AND COMPLETED JOBS*/
+ion-col > div {
+  background-color: var(--light-gray);
+  border: solid 1px #ddd;
+  padding: 7px;
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  margin-top: -10px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+ion-col > .assigned {
+  border-color: solid 1px var(--dark-pink);
+}
+
+.assigned {
+  font-family: var(--body-font);
+  font-weight: bold;
+  background-color: var(--light-gray);
+  color: var(--dark-pink);
+  border: solid 1px var(--dark-pink);
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.assigned:active {
+  font-weight: bold;
+  color: var(--dark-pink);
+  cursor: pointer;
+  border: solid 1px var(--dark-pink);
+}
+
+.completed {
+  font-family: var(--body-font);
+  background-color: var(--light-gray);
+  color: var(--green-success);
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.completed:active {
+  font-weight: bold;
+  color: var(--green-success);
+  cursor: pointer;
+  border: solid 1px var(--green-success);
+}
+
+/* RESPONSIVENESS OF IMAGE */
 @media(max-width: 991px) {
   .img1 {
     margin-right: 10px;

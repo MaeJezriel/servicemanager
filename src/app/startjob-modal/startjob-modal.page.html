@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar>
+  <ion-buttons slot="start">
+      <ion-icon class="back" name="chevron-back" (click)="dismiss();" defaultHref></ion-icon>
+    </ion-buttons>
+    <ion-title>Start Job</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+  <ion-content>
+    <ion-card>
+      <ion-card-content>
+        <p>Please select the start date and time of your job.</p>
+      </ion-card-content>
+    </ion-card>
+
+    <!-- <div class="details">
+      <p>Please select the start date and time of your job.</p>
+    </div>   -->
+
+    <!-- <form [formGroup]="setForm" (ngSubmit)="setDates()"> -->
+      
+      <!-- <ion-item class="error-message-spacer">
+        <ion-label>Start Date: </ion-label>
+        <ion-datetime
+        [(ngModel)]="startDateModel"
+        displayFormat="DDD. MMM DD, YYYY"
+        min="{{minDate}}"
+        (ionChange)="setMinDateForEnd()"
+        monthShortNames="Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec"></ion-datetime>
+      </ion-item> -->
+      <!-- <span class="error-message" *ngIf="isSubmitted && errorControl.fromDate.errors?.required">
+        Start Date is required
+      </span> -->
+    <!-- </form>  -->
+
+    <ion-item-divider></ion-item-divider>
+        <ion-item>
+          <ion-label>Start Date:</ion-label>
+          <ion-datetime value="1990-02-19" placeholder="Select Date"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label>Start Time:</ion-label>
+          <ion-datetime display-format="h:mm A" picker-format="h:mm A" value="1990-02-19T07:43Z"></ion-datetime>
+        </ion-item>
+        <!-- <ion-item>
+          <ion-label>Ends:</ion-label>
+          <ion-datetime value="1990-02-20" placeholder="Select Date"></ion-datetime>
+        </ion-item> -->
+
+        <div class="centered">
+          <ion-button expand="block" type="button" (click)="setInactiveDates()">SET NOW</ion-button>
+        </div>
+  </ion-content>
