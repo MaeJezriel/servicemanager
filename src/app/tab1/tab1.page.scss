@@ -10,8 +10,15 @@ ion-toolbar {
 ion-segment{
   --background: var(--dark-blue);
   border-radius: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+
+ion-label{
+  // background-color: #3699FF;
+  // border-radius: 20px;
+  color: white;
 }
 
 ion-icon {
