@@ -67,6 +67,8 @@ export class Tab2Page implements OnInit {
   public dismiss(): void {
     this.modalCtrl.dismiss();
  }
+
+  //segment
  segmentModel = "summary";
 
   segmentChanged(event){

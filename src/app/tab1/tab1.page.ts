@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { ModalController } from '@ionic/angular';
+import { Component, ViewChild } from '@angular/core';
+import { ModalController, IonSlides } from '@ionic/angular';
 import { ApiService } from '../api.service';
 import { Tab2Page } from '../tab2/tab2.page';
 import { AuthService } from '../services/auth.service';
@@ -14,9 +14,30 @@ export class Tab1Page {
 
   //login
   user = null;
+
+  //slider
+  
+  @ViewChild("SwipedSliderContainer", { static: true })
+  public SwipedSliderContainer: IonSlides;
+
+  public tabs: any = [];
+  public tabIndex: number;
  
   constructor(private modalCtrl: ModalController, private modalController: ModalController,
     public api: ApiService, private auth: AuthService) {}
+
+    public segmentChange(event) {
+      const newtab = event._value;
+      // slider.slideTo(newtab);
+    }
+    
+    segmentModel = "summary";
+
+    segmentChanged(event){
+      console.log(this.segmentModel);
+      
+      console.log(event);
+    }
 
   public date:any = new Date().toISOString();
   public dates:any = new Date().toISOString();
