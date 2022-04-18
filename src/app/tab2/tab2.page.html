@@ -77,11 +77,11 @@
       <ion-label>Checklist</ion-label>
     </ion-segment-button>
 
-    <ion-segment-button value="just">
+    <ion-segment-button value="customer">
       <ion-label>Customer</ion-label>
     </ion-segment-button>
 
-    <ion-segment-button value="onemore">
+    <ion-segment-button value="history">
       <ion-label>History</ion-label>
     </ion-segment-button>
 
@@ -276,7 +276,7 @@
   </ion-card>
 
   <!-- SIGNATURE TAB -->
-  <ion-card *ngIf="segmentModel === 'just'">
+  <ion-card *ngIf="segmentModel === 'customer'">
     <ion-card-header>
       <!-- <ion-card-subtitle>Signature</ion-card-subtitle> -->
       <ion-button class="signature-btn" expand="block" (click)="signature();" >Draw Signature Here</ion-button>
@@ -309,7 +309,7 @@
   </ion-card>
 
   <!-- HISTORY TAB -->
-  <ion-card *ngIf="segmentModel === 'onemore'">
+  <ion-card *ngIf="segmentModel === 'history'">
     <ion-list>
       <ion-list-header> Recent History </ion-list-header>
       <div>

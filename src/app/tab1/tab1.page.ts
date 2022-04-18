@@ -30,7 +30,7 @@ export class Tab1Page {
       // slider.slideTo(newtab);
     }
     
-    segmentModel = "summary";
+    segmentModel = "assigned";
 
     segmentChanged(event){
       console.log(this.segmentModel);
