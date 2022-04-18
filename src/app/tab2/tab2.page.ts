@@ -10,8 +10,6 @@ import { StartjobModalPage } from '../startjob-modal/startjob-modal.page';
 import { UserPhoto, PhotoService } from '../services/photo.service';
 import { Router } from '@angular/router';
 
-
-
 @Component({
   selector: 'app-tab2',
   templateUrl: 'tab2.page.html',
