@@ -211,7 +211,15 @@ h3 {
 /* FOR SEGMENTS */
 ion-label{
   color:#003C77;
-  font-weight: 700;
+  font-family: var(--body-font);
+}
+
+.segment-button-checked ::ng-deep{
+  font-family: var(--body-font);
+  font-weight: bold;
+  --border-radius: 1px solid var(--dark-blue) !important;
+  --color-checked: var(--white);
+  --indicator-color : var(--white) !important; /* this solution */
 }
 
 ion-card-subtitle{
@@ -280,6 +288,7 @@ ion-button {
   border-radius: 0%;
   width: 45%;
   display: inline-block;
+  box-shadow: none !important;
 }
 
 ion-img {
@@ -311,6 +320,7 @@ ion-img {
 
 .btnstart{
   font-family: var(--body-font);
+  box-shadow: none !important;
   color: #ffffff;
   font-weight: 700;
   --background: #30B2EA;
@@ -343,6 +353,7 @@ h5 {
   line-height: 1.4em;
   font-size: 12px;
   margin-top: 25px;
+  color: var(--black-gray);
 }
 
 .row-labels {
@@ -546,6 +557,7 @@ ion-card-title {
 
 /* TITLE IN HISTORY CARD*/
 .text {
+  font-weight: bold;
   color: var(--white);
   display: inline-block;
   vertical-align: middle;

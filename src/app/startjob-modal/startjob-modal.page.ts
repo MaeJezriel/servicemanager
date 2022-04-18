@@ -16,6 +16,8 @@ export class StartjobModalPage implements OnInit {
 
   minDate: any;
   minEndDate: any;
+  maxDate: any;
+  dayValues: any;
 
   startDate: any;
   endDate: any;
@@ -33,6 +35,15 @@ export class StartjobModalPage implements OnInit {
 
   ngOnInit() {
     // this.buildSetForm();
+    // Validation Date
+    this.today.setDate(this.today.getDate());
+    this.minDate = this.today.toISOString().substring(0,10);
+    this.today.setDate(this.today.getDate() + 30);
+    this.maxDate = this.today.toISOString().substring(0, 10);
+
+    this.dayValues = [
+      1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31
+    ];
   }
 
 
@@ -59,6 +70,7 @@ export class StartjobModalPage implements OnInit {
   async setInactiveDates(){
     if(this.startDate === undefined || this.startTime === undefined){
       this.requiredDates();
+
     }
     else{
       this.modalCtrl.dismiss();

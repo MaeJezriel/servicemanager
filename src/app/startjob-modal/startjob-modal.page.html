@@ -37,16 +37,16 @@
     <ion-item-divider></ion-item-divider>
         <ion-item>
           <ion-label>Start Date:</ion-label>
-          <ion-datetime value="1990-02-19" placeholder="Select Date"></ion-datetime>
+          <ion-datetime placeholder="Select Date"
+          displayFormat="DDD. MMM DD, YYYY"
+          dayValues={{dayValues}}
+          min="{{minDate}}"
+          monthShortNames="Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec">></ion-datetime>
         </ion-item>
         <ion-item>
           <ion-label>Start Time:</ion-label>
-          <ion-datetime display-format="h:mm A" picker-format="h:mm A" value="1990-02-19T07:43Z"></ion-datetime>
+          <ion-datetime placeholder="Select Time" display-format="h:mm A" picker-format="h:mm A"></ion-datetime>
         </ion-item>
-        <!-- <ion-item>
-          <ion-label>Ends:</ion-label>
-          <ion-datetime value="1990-02-20" placeholder="Select Date"></ion-datetime>
-        </ion-item> -->
 
         <div class="centered">
           <ion-button expand="block" type="button" (click)="setInactiveDates()">SET NOW</ion-button>
