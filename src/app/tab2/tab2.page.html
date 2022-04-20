@@ -101,18 +101,14 @@
     <ion-list-header> Job Summary </ion-list-header>
     
     <ion-card-content>
+
       <!-- Service Request -->
-     
       <ion-label class="label" position="stacked">Service Request</ion-label>  
       <ion-item>
         <ion-grid>
           <ion-textarea type="text" formControlName="service_request" readonly required></ion-textarea>
         </ion-grid>
       </ion-item>
-
-      <ion-button type="submit" color="primary" shape="full" expand="block">
-        Update
-      </ion-button>
   
       <!-- Site Name -->
       <ion-label class="label" position="stacked">Site Name:</ion-label>
@@ -168,6 +164,10 @@
       <ion-item>
         <p>YES</p>
       </ion-item>
+
+      <div class="centered">
+        <ion-button class="clean-btn" expand="block" type="button">UPDATE</ion-button>
+      </div>
     </ion-card-content>
   </ion-card>
   
