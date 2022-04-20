@@ -56,6 +56,7 @@ ion-button {
     color: var(--white);
     font-family: var(--body-font);
     text-align: center;
+    width: 80%;
     margin-top: 10px;
     font-weight: bold;
     margin-bottom: 5px;
@@ -63,9 +64,39 @@ ion-button {
 
 ion-card {
     margin: 30px 25px 15px 25px;
+    box-shadow: none !important;
     border-radius: 15px;
     border: 1px solid var(--black-gray);
     background: var(--light-gray);
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    width: 90%;
+    position: relative;
+    margin: 30px auto;
+    
+    &.center-ball{
+      background: var(--dark-blue);
+    }
+}
+
+.icon-header {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 95px;
+    color: var(--dark-blue);
+    -ms-transform: rotate(20deg); /* IE 9 */
+    transform: rotate(20deg);
 }
 
 .back{
