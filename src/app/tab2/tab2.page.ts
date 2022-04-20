@@ -54,7 +54,7 @@ export class Tab2Page implements OnInit {
       this.id = this.actRoute.snapshot.paramMap.get('id');
       this.db.getSong(this.id).then(res => {
         this.editForm.setValue({
-          // location_name: res['location_name'],
+           location_name: res['location_name'],
           // tasks_name: res['tasks_name'],
           // time_name: res['time_name'],
           service_request: res['service_request']
@@ -93,7 +93,6 @@ export class Tab2Page implements OnInit {
 
   segmentChanged(event){
     console.log(this.segmentModel);
-    
     console.log(event);
   }
 
@@ -149,7 +148,7 @@ export class Tab2Page implements OnInit {
 
     //mainform
     this.editForm = this.formBuilder.group({
-      // location: [''],
+      location_name: [''],
       // task: [''],
       // time: [''],
       service_request: ['']

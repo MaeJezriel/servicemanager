@@ -71,7 +71,7 @@ export class DbService {
   // Add
   addSong(location_name, tasks_name,time_name, service_request) {
     let data = [location_name, tasks_name, time_name, service_request];
-    return this.storage.executeSql('INSERT INTO jobtable ( location_name, tasks_name, time_name, service_request) VALUES (?, ?, ?, ?)', data)
+    return this.storage.executeSql('INSERT INTO jobtable (location_name, tasks_name, time_name, service_request) VALUES (?, ?, ?, ?)', data)
     .then(res => {
       this.getSongs();
     });
@@ -91,8 +91,8 @@ export class DbService {
   }
   // Update
   updateSong(id, song: Job) {
-    let data = [song.service_request ];
-    return this.storage.executeSql(`UPDATE jobtable SET service_request = ? WHERE id = ${id}`, data)
+    let data = [song.service_request, song.location_name];
+    return this.storage.executeSql(`UPDATE jobtable SET service_request = ?, location_name = ? WHERE id = ${id}`, data)
     .then(data => {
       this.getSongs();
     })
