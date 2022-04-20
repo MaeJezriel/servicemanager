@@ -20,7 +20,7 @@ export class DbService {
   ) {
     this.platform.ready().then(() => {
       this.sqlite.create({
-        name: 'ex4.db',
+        name: 'ex21.db',
         location: 'default'
       })
       .then((db: SQLiteObject) => {
@@ -32,7 +32,7 @@ export class DbService {
   dbState() {
     return this.isDbReady.asObservable();
   }
-  
+
   fetchSongs(): Observable<Job[]> {
     return this.songsList.asObservable();
   }
@@ -58,6 +58,7 @@ export class DbService {
         for (var i = 0; i < res.rows.length; i++) { 
           items.push({ 
             id: res.rows.item(i).id,
+            service_request: res.rows.item(i).service_request,  
             location_name: res.rows.item(i).location_name,  
             tasks_name: res.rows.item(i).tasks_name,
             time_name: res.rows.item(i).time_name,
@@ -82,6 +83,7 @@ export class DbService {
     return this.storage.executeSql('SELECT * FROM jobtable WHERE id = ?', [id]).then(res => { 
       return {
         id: res.rows.item(0).id,
+        service_request: res.rows.item(0). service_request,  
         location_name: res.rows.item(0). location_name,  
         tasks_name: res.rows.item(0).tasks_name,
         time_name: res.rows.item(0).time_name,
@@ -91,8 +93,8 @@ export class DbService {
   }
   // Update
   updateSong(id, song: Job) {
-    let data = [song.site_equipment, song.location_name];
-    return this.storage.executeSql(`UPDATE jobtable SET site_equipment = ?, location_name = ? WHERE id = ${id}`, data)
+    let data = [song.site_equipment, song.location_name, song.service_request];
+    return this.storage.executeSql(`UPDATE jobtable SET site_equipment = ?, location_name = ?, service_request = ? WHERE id = ${id}`, data)
     .then(data => {
       this.getSongs();
     })

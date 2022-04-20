@@ -4,4 +4,5 @@ export class Job {
     tasks_name: string;
     time_name: string;
     site_equipment: string;
+    service_request: string;
 }

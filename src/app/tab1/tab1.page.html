@@ -58,9 +58,11 @@
       </ion-segment-button>
     </ion-segment>
 
+
+
+    <!-- LIST VIEW OF ASSIGNED JOBS -->
     <div class="segment" *ngIf="segmentModel === 'assigned'">
       <div class="container">
-        <!-- LIST VIEW OF ASSIGNED JOBS -->
         <ion-item *ngFor="let data of Data">
           <ion-grid>
             <ion-row class="ion-align-items-center">
@@ -69,7 +71,7 @@
                 <ion-label>
                   <h4>{{data.location_name}}</h4>
                   <h6>{{data.tasks_name}}</h6>
-                  <h3>{{data.time_name}}</h3>
+                  <!-- <h3>{{data.time_name}}</h3> -->
                   <!-- <h3>{{data.service_request}}</h3> -->
                 </ion-label>
               </ion-col>
@@ -79,11 +81,11 @@
         </ion-item>
       </div>
     </div>
-    
+
+
+     <!-- LIST VIEW OF COMPLETED JOBS -->
     <div class="segment" *ngIf="segmentModel === 'completed'">
-    
       <div class="container">
-        <!-- LIST VIEW OF COMPLETED JOBS -->
         <ion-item>
           <ion-grid>
             <ion-row class="ion-align-items-center">
