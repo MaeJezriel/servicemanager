@@ -101,18 +101,14 @@
     <ion-list-header> Job Summary </ion-list-header>
     
     <ion-card-content>
+
       <!-- Service Request -->
-     
       <ion-label class="label" position="stacked">Service Request</ion-label>  
       <ion-item>
         <ion-grid>
-          <ion-input  type="text" required></ion-input>
+          <ion-input type="text" required></ion-input>
         </ion-grid>
       </ion-item>
-
-      <ion-button type="submit" color="primary" shape="full" expand="block">
-        Update
-      </ion-button>
   
       <!-- Site Name -->
       <ion-label class="label" position="stacked">Site Name:</ion-label>
@@ -124,15 +120,13 @@
 
       <!-- Site Equipment -->
       <ion-label class="label" position="stacked">Site Equipment:</ion-label>
-        <ion-item>
-         
-          <ion-select multiple="true" cancelText="Cancel" okText="Okay" formControlName="service_request">
-            <ion-select-option>Gaggia Ruby Pro 1 GRP-Red</ion-select-option>
-            <ion-select-option>Gaggia Ruby Pro 2 GRP-Red</ion-select-option>
-            <ion-select-option>Gaggia Ruby Pro 3 GRP-Red</ion-select-option>
-           </ion-select>
-
-        </ion-item> 
+      <ion-item>
+        <ion-select placeholder="Select Site Equipment" [interfaceOptions]="customOptions" interface="popover" multiple="true" cancelText="Cancel" okText="Okay" formControlName="service_request">
+          <ion-select-option>Gaggia Ruby Pro 1 GRP-Red</ion-select-option>
+          <ion-select-option>Gaggia Ruby Pro 2 GRP-Red</ion-select-option>
+          <ion-select-option>Gaggia Ruby Pro 3 GRP-Red</ion-select-option>
+        </ion-select>
+      </ion-item> 
 
       <!-- Site Address -->
       <ion-label class="label" position="stacked">Site Address:</ion-label>
@@ -168,6 +162,10 @@
       <ion-item>
         <p>YES</p>
       </ion-item>
+
+      <div class="centered">
+        <ion-button class="clean-btn" expand="block" type="button">UPDATE</ion-button>
+      </div>
     </ion-card-content>
   </ion-card>
   
