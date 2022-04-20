@@ -49,6 +49,7 @@
     justify-content: center;
   }
 
+  /* Calendar Picker */
   ion-picker > .picker-wrapper {
     font-family: var(--body-font);
     background-color: var(--light-blue) !important;
@@ -67,4 +68,12 @@
   ion-datetime {
     color: var(--black-gray) !important;
     font-family: var(--body-font);
+  }
+
+  /* Select-Option Radio */
+  .popover-wide {
+    ion-radio {
+      --color-checked: var(--dark-blue) !important;
+      --font-family: var(--body-font) !important;
+    }
   }

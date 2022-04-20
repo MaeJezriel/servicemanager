@@ -64,10 +64,19 @@ export class Tab2Page implements OnInit {
   //Dismiss Btn
   public dismiss(): void {
     this.modalCtrl.dismiss();
- }
+  }
 
-  //segment
- segmentModel = "summary";
+  //Popover
+  customPopoverOptions: any = {
+    cssClass: 'popover-wide',
+  };
+
+  customOptions: any = {
+    cssClass: 'popover',
+  }
+  
+  //Segment
+  segmentModel = "summary";
 
   segmentChanged(event){
     console.log(this.segmentModel);

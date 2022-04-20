@@ -292,7 +292,7 @@ ion-button {
 }
 
 ion-img {
-  width: 80%;
+  width: 30%;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -320,7 +320,7 @@ ion-img {
 
 .btnstart{
   font-family: var(--body-font);
-  box-shadow: none !important;
+  --box-shadow: none !important;
   color: #ffffff;
   font-weight: 700;
   --background: #30B2EA;
@@ -331,6 +331,7 @@ ion-img {
 
 .btncom{
   font-family: var(--body-font);
+  --box-shadow: none !important;
   color: #ffffff;
   font-weight: 700;
   --background: #000;
@@ -732,13 +733,14 @@ canvas {
   margin-bottom: 20px;
 }
 
+.track-day-time {
+  margin-top: 5px;
+}
+
 /* STYLING ION-SELECT, ION-SELECT-OPTIONS */
 ion-select {
   /* Applies to the value and placeholder color */
   color: #545ca7;
-
-  /* Set a different placeholder color */
-  --placeholder-color: #971e49;
 
   /* Set full opacity on the placeholder */
   --placeholder-opacity: 1;
@@ -771,5 +773,10 @@ ion-select::part(icon) {
   opacity: 1;
 }
 
-/* Ion-select-items scss */
-ion-alert div[class='alert-radio-label'] { background-color: red; }
+ion-select-option::part(checkbox) {
+  --checkmark-color: var(--dark-blue);
+  --checkmark-weight: bold;
+  --background-checked: var(--white);
+  --border-color: var(--white);
+  --border-color-checked:var(--white); 
+}

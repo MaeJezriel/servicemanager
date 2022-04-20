@@ -13,36 +13,34 @@
 
 <ion-content>
 
-  <!-- <div class="text-center">
-  </div> -->
-
-  <div>
-    <img class="img1" src="/assets/icon/technician1.svg" alt="Rectangle-219-1" border="0">
-  </div>
-
-  <!-- Legends -->
-  <div class="legend" horizontal="end">
-    <div class="badge">
-      <ion-badge class="badge-assigned">Assigned</ion-badge>&nbsp;
-      <ion-badge color="success">Completed</ion-badge>
+  <div class="text-center">
+    <!-- IMAGE DISPLAYED -->
+    <div>
+      <img class="img1" src="/assets/icon/technician.svg" alt="Rectangle-219-1" border="0">
+    </div>
+  
+    <!-- LEGENDS -->
+    <div class="legend" horizontal="end">
+      <div class="badge">
+        <ion-badge class="badge-assigned">Assigned</ion-badge>&nbsp;
+        <ion-badge color="success">Completed</ion-badge>
+      </div>
+    </div>
+  
+    <!-- DATE INFO -->
+    <div class="header">
+      <h3><span>3</span> Assigned Jobs</h3>
+      <h3 class="today">TODAY</h3>
+      
+      <h1><ion-datetime [(ngModel)]="date"
+        displayFormat="DD" readonly>
+      </ion-datetime></h1>
+      
+      <h2><ion-datetime [(ngModel)]="dates"
+      displayFormat="DDD" readonly></ion-datetime></h2> 
     </div>
   </div>
 
-  <!-- Date Info -->
-  <div class="header">
-    <h3><span>3</span> Assigned Jobs</h3>
-    <h3 class="today">TODAY</h3>
-    
-    <h1><ion-datetime [(ngModel)]="date"
-      displayFormat="DD" readonly>
-    </ion-datetime></h1>
-    
-    <h2><ion-datetime [(ngModel)]="dates"
-    displayFormat="DDD" readonly></ion-datetime></h2> 
-  </div>
-
-  <!--testing for ion-segment-->
-  
     <!-- CONTENT SEGMENT -->
     <ion-segment 
     value="summary" 
@@ -59,12 +57,10 @@
         <ion-label>Completed</ion-label>
       </ion-segment-button>
     </ion-segment>
- 
-
 
     <div class="segment" *ngIf="segmentModel === 'assigned'">
       <div class="container">
-        <!-- List View of Jobs -->
+        <!-- LIST VIEW OF ASSIGNED JOBS -->
         <ion-item *ngFor="let data of Data">
           <ion-grid>
             <ion-row class="ion-align-items-center">
@@ -83,11 +79,10 @@
       </div>
     </div>
     
-
     <div class="segment" *ngIf="segmentModel === 'completed'">
     
       <div class="container">
-        <!--List View of Jobs-->
+        <!-- LIST VIEW OF COMPLETED JOBS -->
         <ion-item>
           <ion-grid>
             <ion-row class="ion-align-items-center">
