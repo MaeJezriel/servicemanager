@@ -2,7 +2,7 @@
   <ion-toolbar>
     <div class="container">
       <ion-buttons slot="start">
-        <ion-icon class="back" name="chevron-back" (click)="dismiss()" defaultHref></ion-icon>
+        <ion-icon class="back" name="chevron-back"[routerLink]="['/members/tab1']" defaultHref></ion-icon>
       </ion-buttons>
 
       <!-- HEADER BADGE -->
@@ -96,19 +96,24 @@
   
  <!-- SUMMARY TAB -->
 <ion-content [fullscreen]="true" class="ion-padding">
+  <form [formGroup]="editForm" (ngSubmit)="saveForm()">
   <ion-card *ngIf="segmentModel === 'summary'">
     <ion-list-header> Job Summary </ion-list-header>
     
     <ion-card-content>
       <!-- Service Request -->
+     
       <ion-label class="label" position="stacked">Service Request</ion-label>  
       <ion-item>
         <ion-grid>
-            <p>I need a new set of equipment tools for creating coffee
-              machine inside the warehouse.</p>
+          <ion-input  type="text" required></ion-input>
         </ion-grid>
       </ion-item>
 
+      <ion-button type="submit" color="primary" shape="full" expand="block">
+        Update
+      </ion-button>
+  
       <!-- Site Name -->
       <ion-label class="label" position="stacked">Site Name:</ion-label>
       <ion-item>
@@ -119,11 +124,15 @@
 
       <!-- Site Equipment -->
       <ion-label class="label" position="stacked">Site Equipment:</ion-label>
-      <ion-item>
-        <ion-select placeholder="Select Site Equipment" [interfaceOptions]="customOptions" interface="popover" multiple="true" cancelText="Cancel" okText="Okay">
-          <ion-select-option *ngFor="let data of datauser" >{{data.email}}</ion-select-option>
-        </ion-select>
-      </ion-item> 
+        <ion-item>
+         
+          <ion-select multiple="true" cancelText="Cancel" okText="Okay" formControlName="service_request">
+            <ion-select-option>Gaggia Ruby Pro 1 GRP-Red</ion-select-option>
+            <ion-select-option>Gaggia Ruby Pro 2 GRP-Red</ion-select-option>
+            <ion-select-option>Gaggia Ruby Pro 3 GRP-Red</ion-select-option>
+           </ion-select>
+
+        </ion-item> 
 
       <!-- Site Address -->
       <ion-label class="label" position="stacked">Site Address:</ion-label>
@@ -385,4 +394,5 @@
       and climb a mountain or spend a week in the woods. Wash your spirit clean.
     </ion-card-content>
   </ion-card>
+</form>
 </ion-content>
