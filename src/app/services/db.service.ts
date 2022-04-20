@@ -20,7 +20,7 @@ export class DbService {
   ) {
     this.platform.ready().then(() => {
       this.sqlite.create({
-        name: 'sample.db',
+        name: 'ex3.db',
         location: 'default'
       })
       .then((db: SQLiteObject) => {
@@ -61,6 +61,7 @@ export class DbService {
             location_name: res.rows.item(i).location_name,  
             tasks_name: res.rows.item(i).tasks_name,
             time_name: res.rows.item(i).time_name,
+            service_request: res.rows.item(i).service_request,
            });
         }
       }
@@ -68,9 +69,9 @@ export class DbService {
     });
   }
   // Add
-  addSong(artist_name, song_name, sample_name) {
-    let data = [artist_name, song_name, sample_name];
-    return this.storage.executeSql('INSERT INTO jobtable ( location_name, tasks_name, time_name) VALUES (?, ?, ?)', data)
+  addSong(location_name, tasks_name,time_name, service_request) {
+    let data = [location_name, tasks_name, time_name, service_request];
+    return this.storage.executeSql('INSERT INTO jobtable ( location_name, tasks_name, time_name, service_request) VALUES (?, ?, ?, ?)', data)
     .then(res => {
       this.getSongs();
     });
@@ -84,13 +85,14 @@ export class DbService {
         location_name: res.rows.item(0). location_name,  
         tasks_name: res.rows.item(0).tasks_name,
         time_name: res.rows.item(0).time_name,
+        service_request: res.rows.item(0).service_request,
       }
     });
   }
   // Update
   updateSong(id, song: Job) {
-    let data = [song.location_name, song.tasks_name,  song.time_name ];
-    return this.storage.executeSql(`UPDATE jobtable SET location_name = ?, tasks_name = ?, time_name = ? WHERE id = ${id}`, data)
+    let data = [song.service_request ];
+    return this.storage.executeSql(`UPDATE jobtable SET service_request = ? WHERE id = ${id}`, data)
     .then(data => {
       this.getSongs();
     })

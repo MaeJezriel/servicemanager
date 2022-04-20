@@ -8,7 +8,9 @@ import { SignaturePage } from '../customer-modal/signature/signature.page';
 import { ViewDetailsPage } from '../history-modal/view-details/view-details.page';
 import { StartjobModalPage } from '../startjob-modal/startjob-modal.page';
 import { UserPhoto, PhotoService } from '../services/photo.service';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { DbService } from '../services/db.service';
 
 @Component({
   selector: 'app-tab2',
@@ -16,6 +18,10 @@ import { Router } from '@angular/router';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page implements OnInit {
+
+  //form
+  editForm: FormGroup;
+  id: any;
 
   //canvas
   @ViewChild(SignaturePad) signaturePad: SignaturePad;
@@ -37,8 +43,24 @@ export class Tab2Page implements OnInit {
   public tabIndex: number;
 
   constructor(private modalCtrl: ModalController, public api: ApiService,
-    private toastCtrl: ToastController,  private router: Router,
-    public photoService: PhotoService, public actionSheetController: ActionSheetController) {}
+    private toastCtrl: ToastController, 
+    public formBuilder: FormBuilder,
+    private db: DbService,
+    public modalController: ModalController,
+    private actRoute: ActivatedRoute,
+    public toastController: ToastController,
+    private router: Router,
+    public photoService: PhotoService, public actionSheetController: ActionSheetController) {
+      this.id = this.actRoute.snapshot.paramMap.get('id');
+      this.db.getSong(this.id).then(res => {
+        this.editForm.setValue({
+          // location_name: res['location_name'],
+          // tasks_name: res['tasks_name'],
+          // time_name: res['time_name'],
+          service_request: res['service_request']
+        })
+      })
+    }
 
   public segmentChange(event) {
     const newtab = event._value;
@@ -122,6 +144,19 @@ export class Tab2Page implements OnInit {
 
   //Get Function
   async ngOnInit() {
+
+    
+
+    //mainform
+    this.editForm = this.formBuilder.group({
+      // location: [''],
+      // task: [''],
+      // time: [''],
+      service_request: ['']
+      // song_name: ['']
+    })
+
+
     await this.photoService.loadSaved();
     this.getDataUser();
     this.getMainfaultCode();
@@ -172,6 +207,32 @@ export class Tab2Page implements OnInit {
       console.log(err);
     });
   }
+
+  //SQLITE
+  saveForm(){
+    this.db.updateSong(this.id, this.editForm.value)
+    .then( (res) => {
+      console.log(res)
+      this.successEditJeepneyAlert();
+    })
+  }
+
+async successEditJeepneyAlert() {
+    this.dismissModal();
+    const toast = await this.toastController.create({
+      message: 'Successfully Edited!',
+      duration: 2000
+    });
+    toast.present();
+    await toast.onDidDismiss();
+  }
+
+  dismissModal() {
+    this.modalController.dismiss({
+      'dismissed': true
+    });
+  }
+
 }
 
 

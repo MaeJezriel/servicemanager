@@ -40,17 +40,18 @@ export class Tab1Page implements OnInit {
         }
       });
       this.mainForm = this.formBuilder.group({
-        artist: [''],
-        song: [''],
-        sample: [''],
+        location: [''],
+        task: [''],
+        time: [''],
+        service: ['']
       })
     }
     storeData() {
       this.db.addSong(
-        this.mainForm.value.artist,
-        this.mainForm.value.song,
-        this.mainForm.value.sample
-  
+        this.mainForm.value.location,
+        this.mainForm.value.task,
+        this.mainForm.value.time,
+        this.mainForm.value.service,
       ).then((res) => {
         this.mainForm.reset();
       })
