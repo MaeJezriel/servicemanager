@@ -20,7 +20,7 @@ export class DbService {
   ) {
     this.platform.ready().then(() => {
       this.sqlite.create({
-        name: 'ex3.db',
+        name: 'ex4.db',
         location: 'default'
       })
       .then((db: SQLiteObject) => {
@@ -32,7 +32,7 @@ export class DbService {
   dbState() {
     return this.isDbReady.asObservable();
   }
- 
+  
   fetchSongs(): Observable<Job[]> {
     return this.songsList.asObservable();
   }
@@ -61,7 +61,7 @@ export class DbService {
             location_name: res.rows.item(i).location_name,  
             tasks_name: res.rows.item(i).tasks_name,
             time_name: res.rows.item(i).time_name,
-            service_request: res.rows.item(i).service_request,
+            site_equipment: res.rows.item(i).site_equipment,
            });
         }
       }
@@ -69,9 +69,9 @@ export class DbService {
     });
   }
   // Add
-  addSong(location_name, tasks_name,time_name, service_request) {
-    let data = [location_name, tasks_name, time_name, service_request];
-    return this.storage.executeSql('INSERT INTO jobtable (location_name, tasks_name, time_name, service_request) VALUES (?, ?, ?, ?)', data)
+  addSong(location_name, tasks_name,time_name, site_equipment) {
+    let data = [location_name, tasks_name, time_name, site_equipment];
+    return this.storage.executeSql('INSERT INTO jobtable (location_name, tasks_name, time_name, site_equipment) VALUES (?, ?, ?, ?)', data)
     .then(res => {
       this.getSongs();
     });
@@ -85,14 +85,14 @@ export class DbService {
         location_name: res.rows.item(0). location_name,  
         tasks_name: res.rows.item(0).tasks_name,
         time_name: res.rows.item(0).time_name,
-        service_request: res.rows.item(0).service_request,
+        site_equipment: res.rows.item(0).site_equipment,
       }
     });
   }
   // Update
   updateSong(id, song: Job) {
-    let data = [song.service_request, song.location_name];
-    return this.storage.executeSql(`UPDATE jobtable SET service_request = ?, location_name = ? WHERE id = ${id}`, data)
+    let data = [song.site_equipment, song.location_name];
+    return this.storage.executeSql(`UPDATE jobtable SET site_equipment = ?, location_name = ? WHERE id = ${id}`, data)
     .then(data => {
       this.getSongs();
     })

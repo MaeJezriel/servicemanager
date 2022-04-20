@@ -57,7 +57,7 @@ export class Tab2Page implements OnInit {
            location_name: res['location_name'],
           // tasks_name: res['tasks_name'],
           // time_name: res['time_name'],
-          service_request: res['service_request']
+          site_equipment: res['site_equipment']
         })
       })
     }
@@ -153,14 +153,12 @@ export class Tab2Page implements OnInit {
   //Get Function
   async ngOnInit() {
 
-    
-
     //mainform
     this.editForm = this.formBuilder.group({
       location_name: [''],
       // task: [''],
       // time: [''],
-      service_request: ['']
+      site_equipment: ['']
       // song_name: ['']
     })
 
