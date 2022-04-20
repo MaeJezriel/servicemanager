@@ -114,19 +114,21 @@
       <ion-label class="label" position="stacked">Site Name:</ion-label>
       <ion-item>
         <ion-grid>
-            <p>Dunbrae Subic. Inc Warehouse</p>
+          <ion-input  type="text" formControlName="location_name" readonly required></ion-input>
         </ion-grid>
       </ion-item>
 
       <!-- Site Equipment -->
       <ion-label class="label" position="stacked">Site Equipment:</ion-label>
-      <ion-item>
-        <ion-select placeholder="Select Site Equipment" [interfaceOptions]="customOptions" interface="popover" multiple="true" cancelText="Cancel" okText="Okay" formControlName="service_request">
-          <ion-select-option>Gaggia Ruby Pro 1 GRP-Red</ion-select-option>
-          <ion-select-option>Gaggia Ruby Pro 2 GRP-Red</ion-select-option>
-          <ion-select-option>Gaggia Ruby Pro 3 GRP-Red</ion-select-option>
-        </ion-select>
-      </ion-item> 
+        <ion-item>
+         
+          <ion-select multiple="true" cancelText="Cancel" okText="Okay" formControlName="site_equipment">
+            <ion-select-option>Gaggia Ruby Pro 1 GRP-Red</ion-select-option>
+            <ion-select-option>Gaggia Ruby Pro 2 GRP-Red</ion-select-option>
+            <ion-select-option>Gaggia Ruby Pro 3 GRP-Red</ion-select-option>
+           </ion-select>
+
+        </ion-item> 
 
       <!-- Site Address -->
       <ion-label class="label" position="stacked">Site Address:</ion-label>
