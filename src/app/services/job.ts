@@ -5,5 +5,4 @@ export class Job {
     time_name: string;
     site_equipment: string;
     service_request: string;
-    site_address: string;
 }

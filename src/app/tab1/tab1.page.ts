@@ -43,8 +43,7 @@ export class Tab1Page implements OnInit {
         location: [''],
         task: [''],
         time: [''],
-        service: [''],
-        site: [''],
+        service: ['']
       })
     }
     storeData() {
@@ -53,7 +52,6 @@ export class Tab1Page implements OnInit {
         this.mainForm.value.task,
         this.mainForm.value.time,
         this.mainForm.value.service,
-        this.mainForm.value.site,
       ).then((res) => {
         this.mainForm.reset();
       })
