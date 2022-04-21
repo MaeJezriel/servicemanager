@@ -57,7 +57,8 @@ export class Tab2Page implements OnInit {
            location_name: res['location_name'],
           // tasks_name: res['tasks_name'],
           service_request: res['service_request'],
-          site_equipment: res['site_equipment']
+          site_equipment: res['site_equipment'],
+          site_address: res['site_address']
         })
       })
     }
@@ -158,7 +159,8 @@ export class Tab2Page implements OnInit {
       location_name: [''],
       // task: [''],
       service_request: [''],
-      site_equipment: ['']
+      site_equipment: [''],
+      site_address: ['']
       // song_name: ['']
     })
 
