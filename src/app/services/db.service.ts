@@ -20,7 +20,7 @@ export class DbService {
   ) {
     this.platform.ready().then(() => {
       this.sqlite.create({
-        name: 'ex21.db',
+        name: 'ex25.db',
         location: 'default'
       })
       .then((db: SQLiteObject) => {

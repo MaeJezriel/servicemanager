@@ -219,11 +219,11 @@ export class Tab2Page implements OnInit {
     this.db.updateSong(this.id, this.editForm.value)
     .then( (res) => {
       console.log(res)
-      this.successEditJeepneyAlert();
+      this.successEditjobAlert();
     })
   }
 
-async successEditJeepneyAlert() {
+async successEditjobAlert() {
     this.dismissModal();
     const toast = await this.toastController.create({
       message: 'Successfully Edited!',
