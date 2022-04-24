@@ -193,7 +193,7 @@
       <ion-label class="label" position="stacked">Problem:</ion-label>
       <ion-item>
         <ion-grid>
-          <ion-textarea placeholder="Problems you have encountered during your work.">
+          <ion-textarea formControlName="problem_name" placeholder="Problems you have encountered during your work.">
           </ion-textarea>
         </ion-grid>
       </ion-item>
@@ -217,7 +217,7 @@
       </ion-item>
 
       <div class="centered">
-        <ion-button class="clean-btn" expand="block"  (click)="presentToast()" type="button">SAVE</ion-button>
+        <ion-button class="clean-btn" expand="block"  type="submit">SAVE</ion-button>
       </div>
 
     </ion-card-content>

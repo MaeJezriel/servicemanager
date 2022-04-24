@@ -20,7 +20,7 @@ export class DbService {
   ) {
     this.platform.ready().then(() => {
       this.sqlite.create({
-        name: 'ex25.db',
+        name: 'exe25.db',
         location: 'default'
       })
       .then((db: SQLiteObject) => {
@@ -63,6 +63,7 @@ export class DbService {
             tasks_name: res.rows.item(i).tasks_name,
             time_name: res.rows.item(i).time_name,
             site_equipment: res.rows.item(i).site_equipment,
+            problem_name: res.rows.item(i).problem_name
            });
         }
       }
@@ -70,9 +71,9 @@ export class DbService {
     });
   }
   // Add
-  addSong(location_name, tasks_name,time_name, site_equipment) {
-    let data = [location_name, tasks_name, time_name, site_equipment];
-    return this.storage.executeSql('INSERT INTO jobtable (location_name, tasks_name, time_name, site_equipment) VALUES (?, ?, ?, ?)', data)
+  addSong(location_name, tasks_name,time_name, site_equipment, problem_name) {
+    let data = [location_name, tasks_name, time_name, site_equipment, problem_name];
+    return this.storage.executeSql('INSERT INTO jobtable (location_name, tasks_name, time_name, site_equipment, problem_name) VALUES (?, ?, ?, ?, ?)', data)
     .then(res => {
       this.getSongs();
     });
@@ -88,13 +89,14 @@ export class DbService {
         tasks_name: res.rows.item(0).tasks_name,
         time_name: res.rows.item(0).time_name,
         site_equipment: res.rows.item(0).site_equipment,
+        problem_name: res.rows.item(0).problem_name
       }
     });
   }
   // Update
   updateSong(id, song: Job) {
-    let data = [song.site_equipment, song.location_name, song.service_request];
-    return this.storage.executeSql(`UPDATE jobtable SET site_equipment = ?, location_name = ?, service_request = ? WHERE id = ${id}`, data)
+    let data = [song.site_equipment, song.location_name, song.service_request, song.problem_name];
+    return this.storage.executeSql(`UPDATE jobtable SET site_equipment = ?, location_name = ?, service_request = ?, problem_name = ? WHERE id = ${id}`, data)
     .then(data => {
       this.getSongs();
     })
