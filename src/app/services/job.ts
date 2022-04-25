@@ -6,4 +6,6 @@ export class Job {
     site_equipment: string;
     service_request: string;
     problem_name: string;
+    action_name: string;
+    recommended_name: string;
 }
