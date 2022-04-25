@@ -69,7 +69,7 @@ export class StartjobModalPage implements OnInit {
 
   async setInactiveDates(){
     if(this.startDate === undefined || this.startTime === undefined){
-      this.requiredDates();
+      this.successSetInactives();
 
     }
     else{
