@@ -76,49 +76,49 @@ ion-label {
 }
 
 .h2{
-    font-family: var(--body-font);
-    color: gray;
-    font-weight: lighter;
-    margin-top: 50%;
-    font-size: 15px;
-    text-align: left;
-    margin-left: -240%;
+  font-family: var(--body-font);
+  color: gray;
+  font-weight: lighter;
+  margin-top: 50%;
+  font-size: 15px;
+  text-align: left;
+  margin-left: -240%;
 }
 
 .h1{
-    font-family: var(--body-font);
-    color: var(--blue-green-dark);
-    font-weight: bold;
-    margin-top: 50%;
-    font-size: 15px;
-    text-align: left;
-    margin-left: -240%;   
+  font-family: var(--body-font);
+  color: var(--blue-green-dark);
+  font-weight: bold;
+  margin-top: 50%;
+  font-size: 15px;
+  text-align: left;
+  margin-left: -240%;   
 }
 
 .icon-violet{
-    color: gray;
-    font-size: 20px;
-    margin-left: 5px;
-    width: 100px;
-    height: 100px;
+  color: gray;
+  font-size: 20px;
+  margin-left: 5px;
+  width: 100px;
+  height: 100px;
 }
 
 .container{
-    --background-color: #D0DEEB  !important;
-    padding: 0;
-    margin: 14px 0;
-    border-radius: 0px;
-    color: #D0DEEB;
-    font-weight: 600;
+  --background-color: #D0DEEB  !important;
+  padding: 0;
+  margin: 14px 0;
+  border-radius: 0px;
+  color: #D0DEEB;
+  font-weight: 600;
 }
 
 /* FOR CARDS */
 
-ion-badge{
+ion-badge {
   margin-left: 2%;
 }
 
-.text-icon{
+.text-icon {
   color: #003C77;
   white-space: initial;
   margin-left: 1%;
@@ -209,7 +209,7 @@ h3 {
 }
 
 /* FOR SEGMENTS */
-ion-label{
+ion-label {
   color:#003C77;
   font-family: var(--body-font);
 }
@@ -222,7 +222,7 @@ ion-label{
   --indicator-color : var(--white) !important; /* this solution */
 }
 
-ion-card-subtitle{
+ion-card-subtitle {
   font-family: var(--body-font);
   color: rgb(80, 79, 79);
   font-weight: bolder;
@@ -272,7 +272,7 @@ ion-item {
   border: none;
 }
 
-.label{
+.label {
   font-family: var(--body-font);
   color: rgb(80, 79, 79);
   font-weight: bold;
@@ -461,7 +461,7 @@ h5 {
 }
 
 /* HR CLASS */
-hr{
+hr {
   border: 0;
   height: 1.5px;
   width: 70%;

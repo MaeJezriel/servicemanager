@@ -2,34 +2,18 @@ ion-header,
 ion-toolbar {
   --background: var(--dark-blue);
 }
+
 ion-title {
-    font-family: 'Poppins', sans-serif;
-    color: var(--white);
-    font-weight: 500;
-    font-size: 15px;
-  }
-
-  ion-label{
-    font-family: 'Poppins', sans-serif;
-    margin-left: 5%;
-    margin-top: 2%;
+  font-family: 'Poppins', sans-serif;
+  color: var(--white);
+  font-weight: 500;
+  font-size: 15px;
 }
 
-
-.back{
-    color: var(--white) !important;
-    font-weight: bold;
-    margin-left: 15px;
-    font-size: 20px;
-}
-
-//signature
-canvas {
-  display: block;
-  border: 1px solid rgb(187, 178, 178);
-  box-sizing: border-box;
-  box-shadow: 10px 5px 5px red;
-  background-color: var(--ion-color-success);
+ion-label{
+  font-family: 'Poppins', sans-serif;
+  margin-left: 5%;
+  margin-top: 2%;
 }
 
 signature-pad {
@@ -41,8 +25,29 @@ signature-pad {
   background-color: var(--white);
 }
 
+.back{
+  color: var(--white) !important;
+  font-weight: bold;
+  margin-left: 15px;
+  font-size: 20px;
+}
+
+//signature
+// canvas {
+//   display: block;
+//   border: 1px solid rgb(187, 178, 178);
+//   box-sizing: border-box;
+//   box-shadow: 10px 5px 5px red;
+//   background-color: var(--ion-color-success);
+// }
+
 .btn-clear {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
+}
+
+canvas {
+  border: 3px dashed gray;
+  width: 100%;
 }
 

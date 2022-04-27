@@ -7,7 +7,7 @@ ion-header, ion-toolbar {
 }
 
 ion-title {
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--body-font);
     color: var(--white);
     font-weight: 500;
     font-size: 15px;
@@ -20,7 +20,7 @@ ion-card {
   background: var(--light-gray);
 }
 
-p{
+p {
     // margin: 10px;
     // font-weight: bold;
     font-size: 13px;
@@ -78,7 +78,7 @@ p{
 }
 
 @media(max-width: 320px) {
-    p{
+    p {
         // margin: 10px;
         // font-weight: bold;
         font-size: 12px;

@@ -5,15 +5,15 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:label="Job Service Manager"
+        android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
         <activity
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|smallestScreenSize|screenLayout|uiMode"
             android:name="io.ionic.demo.pg.cap.ng.MainActivity"
-            android:label="@string/title_activity_main"
+            android:label="Job Service Manager"
             android:theme="@style/AppTheme.NoActionBarLaunch"
             android:launchMode="singleTask">
 

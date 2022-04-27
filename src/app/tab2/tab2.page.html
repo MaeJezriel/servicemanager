@@ -84,10 +84,6 @@
     <ion-segment-button value="history">
       <ion-label>History</ion-label>
     </ion-segment-button>
-
-    <!-- <ion-segment-button value="tofill">
-      <ion-label>To Fill</ion-label>
-    </ion-segment-button> -->
   </ion-segment>
 </ion-toolbar>
 </ion-header>
@@ -287,11 +283,9 @@
     <ion-card-header>
       <!-- <ion-card-subtitle>Signature</ion-card-subtitle> -->
       <ion-button class="signature-btn" expand="block" (click)="signature();" >Draw Signature Here</ion-button>
-      
     </ion-card-header>
-  
+    
     <ion-card-content>
-
       <!-- Customer Name -->
       <img src='{{ signatureImg }}' />
       <ion-label class="label" position="stacked">Customer Name</ion-label>  
@@ -381,18 +375,6 @@
         </ion-card>
       </div>
     </ion-list>
-  </ion-card>
-
-  <ion-card *ngIf="segmentModel === 'tofill'">
-    <ion-card-header>
-      <ion-card-subtitle>Segment Content</ion-card-subtitle>
-      <ion-card-title>To Fill</ion-card-title>
-    </ion-card-header>
-  
-    <ion-card-content>
-      Keep close to Nature's heart... and break clear away, once in awhile,
-      and climb a mountain or spend a week in the woods. Wash your spirit clean.
-    </ion-card-content>
   </ion-card>
 </form>
 </ion-content>
