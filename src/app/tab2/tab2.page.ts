@@ -60,7 +60,8 @@ export class Tab2Page implements OnInit {
           site_equipment: res['site_equipment'],
           problem_name: res['problem_name'],
           action_name: res['action_name'],
-          recommended_name: res['recommended_name']
+          recommended_name: res['recommended_name'],
+          fault_code: res['fault_code'],
         })
       })
     }
@@ -164,7 +165,8 @@ export class Tab2Page implements OnInit {
       site_equipment: [''],
       problem_name: [''],
       action_name: [''],
-      recommended_name: ['']
+      recommended_name: [''],
+      fault_code:['']
       // song_name: ['']
     })
 
