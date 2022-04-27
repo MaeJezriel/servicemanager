@@ -4,16 +4,11 @@
     <ion-icon class="back" name="chevron-back" (click)="dismiss();" defaultHref></ion-icon>
     </ion-buttons>
     <ion-title>Signature</ion-title>
-    <ion-buttons slot="end">
-      <ion-button color="light" expand="full" [disabled]="isCanvasBlank()" (click)="save()"> Save</ion-button>
-      <ion-button color="light" expand="full" (click)="undo()"> Undo</ion-button>
-      <ion-button color="light" expand="full" (click)="clear()"> Clear</ion-button>
-    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding" >
-  <!-- <div class="signature-container">
+  <div class="signature-container">
     <signature-pad [options]="signaturePadOptions" (onBeginEvent)="drawStart()" (onEndEvent)="drawComplete()"></signature-pad>
     <ion-grid>
       <ion-row>
@@ -26,10 +21,5 @@
       </ion-row>
     </ion-grid>
   </div>
-  <img src='{{ signatureImg }}' /> -->
-  <div class="signature-pad">
-    <div>
-      <canvas class="signature-pad-canvas" #canvas width="900" height="400" style="touch-action: none;"></canvas>
-    </div>
-  </div>
+  <img src='{{ signatureImg }}' />
 </ion-content>
