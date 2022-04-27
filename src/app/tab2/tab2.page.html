@@ -180,8 +180,8 @@
       <!-- Contact Person -->
       <ion-label class="label" position="stacked">Main fault Code:</ion-label>
       <ion-item >
-        <ion-select placeholder="Select Fault Code" [interfaceOptions]="customPopoverOptions" interface="popover" multiple="false" cancelText="Cancel" okText="Okay">
-          <ion-select-option *ngFor="let data of mainfault" >{{data.description}}</ion-select-option>
+        <ion-select formControlName="fault_code" placeholder="Select Fault Code" [interfaceOptions]="customPopoverOptions" interface="popover" multiple="false" cancelText="Cancel" okText="Okay">
+          <ion-select-option *ngFor="let data of datauser" >{{data.email}}</ion-select-option>
         </ion-select>
       </ion-item> 
      

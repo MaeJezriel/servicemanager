@@ -5,6 +5,7 @@ export class Job {
     time_name: string;
     site_equipment: string;
     service_request: string;
+    fault_code: string;
     problem_name: string;
     action_name: string;
     recommended_name: string;
