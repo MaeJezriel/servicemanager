@@ -45,10 +45,10 @@
       </ion-grid> -->
 
       <!-- START/COMPLETED BUTTON -->
-      <section no-padding>
+      <!-- <section no-padding>
         <ion-button class="btnstart" (click)="startJob()">Start Job</ion-button>
         <ion-button class="btncom">Mark as Complete</ion-button>
-      </section>   
+      </section>    -->
     </div>
   </ion-toolbar>  
   
@@ -291,7 +291,7 @@
       <ion-label class="label" position="stacked">Customer Name</ion-label>  
       <ion-item>
         <ion-grid>
-          <ion-input placeholder="Input text here"></ion-input>
+          <ion-input formControlName="customer_name" placeholder="Input text here"></ion-input>
         </ion-grid>
       </ion-item>
 
@@ -299,12 +299,12 @@
       <ion-label class="label" position="stacked">Position</ion-label>  
       <ion-item>
         <ion-grid>
-          <ion-input placeholder="Input text here"></ion-input>
+          <ion-input formControlName="position_name" placeholder="Input text here"></ion-input>
         </ion-grid>
       </ion-item>
 
       <div class="centered">
-        <ion-button class="clean-btn" expand="block" type="button">SAVE</ion-button>
+        <ion-button class="clean-btn" expand="block" type="button" type="submit" >SAVE</ion-button>
       </div>
     </ion-card-content>
   </ion-card>

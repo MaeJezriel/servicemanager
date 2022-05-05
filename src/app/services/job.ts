@@ -9,4 +9,6 @@ export class Job {
     problem_name: string;
     action_name: string;
     recommended_name: string;
+    customer_name: string;
+    position_name: string;
 }
