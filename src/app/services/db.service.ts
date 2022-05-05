@@ -20,7 +20,7 @@ export class DbService {
   ) {
     this.platform.ready().then(() => {
       this.sqlite.create({
-        name: 'test1.db',
+        name: 'test2.db',
         location: 'default'
       })
       .then((db: SQLiteObject) => {
@@ -66,7 +66,9 @@ export class DbService {
             problem_name: res.rows.item(i).problem_name,
             action_name: res.rows.item(i).action_name,
             recommended_name: res.rows.item(i).recommended_name,
-            fault_code: res.rows.item(i).fault_code
+            fault_code: res.rows.item(i).fault_code,
+            customer_name: res.rows.item(i).customer_name,
+            position_name: res.rows.item(i).position_name
            });
         }
       }
@@ -95,14 +97,16 @@ export class DbService {
         problem_name: res.rows.item(0).problem_name,
         action_name: res.rows.item(0).action_name,
         recommended_name: res.rows.item(0).recommended_name,
-        fault_code: res.rows.item(0).fault_code
+        fault_code: res.rows.item(0).fault_code,
+        customer_name: res.rows.item(0).customer_name,
+        position_name: res.rows.item(0).position_name
       }
     });
   }
   // Update
   updateSong(id, song: Job) {
-    let data = [song.site_equipment, song.location_name, song.service_request, song.problem_name, song.action_name, song.recommended_name, song.fault_code];
-    return this.storage.executeSql(`UPDATE jobtable SET site_equipment = ?, location_name = ?, service_request = ?, problem_name = ?, action_name = ?, recommended_name = ?, fault_code = ? WHERE id = ${id}`, data)
+    let data = [song.site_equipment, song.location_name, song.service_request, song.problem_name, song.action_name, song.recommended_name, song.fault_code, song.customer_name, song.position_name];
+    return this.storage.executeSql(`UPDATE jobtable SET site_equipment = ?, location_name = ?, service_request = ?, problem_name = ?, action_name = ?, recommended_name = ?, fault_code = ?, customer_name = ?, position_name = ? WHERE id = ${id}`, data)
     .then(data => {
       this.getSongs();
     })
