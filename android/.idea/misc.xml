@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/xampp/htdocs/servicemanager/android/app/src/main/res/drawable/splash.xml" value="0.1" />
+        <entry key="..\:/xampp/htdocs/servicemanager/android/app/src/main/res/layout/activity_main.xml" value="0.13131839499739448" />
         <entry key="..\:/xampp/htdocs/servicemanager/android/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
       </map>
     </option>

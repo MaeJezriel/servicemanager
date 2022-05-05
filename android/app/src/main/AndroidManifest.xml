@@ -14,7 +14,6 @@
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|smallestScreenSize|screenLayout|uiMode"
             android:name="io.ionic.demo.pg.cap.ng.MainActivity"
             android:label="Job Service Manager"
-            android:theme="@style/AppTheme.NoActionBarLaunch"
             android:launchMode="singleTask">
 
             <intent-filter>

@@ -11,147 +11,148 @@ ion-content {
     background-size: cover;
     min-height: 20vh;
     background-position: center;
+    
     &::-webkit-scrollbar {
       display: none;
     }
   }
   
-  ion-item {
-    // background: var(--white);
-    --ion-item-background: transparent;
-    border: 2px solid var(--dark-blue);
-    box-sizing: border-box;
-    height: 55px;
-    margin: 25px 15px 15px 15px;
-    border-radius: 10px;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    text-align: left;
-  }
+ion-item {
+  // background: var(--white);
+  --ion-item-background: transparent;
+  border: 2px solid var(--dark-blue);
+  box-sizing: border-box;
+  height: 55px;
+  margin: 25px 15px 15px 15px;
+  border-radius: 10px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  text-align: left;
+}
     
-  ion-input {
-    font-family: var(--body-font);
-    color: var(--black-gray);
-    height: 55px;
-    margin-left: 7px;
-  }
+ion-input {
+  font-family: var(--body-font);
+  color: var(--black-gray);
+  height: 55px;
+  margin-left: 7px;
+}
   
-  ion-icon {
-    color: var(--dark-blue);
-    margin-right: 15px;
-    font-size: large;
-  }
+ion-icon {
+  color: var(--dark-blue);
+  margin-right: 15px;
+  font-size: large;
+}
   
-  ion-button {
-    --background: var(--dark-blue);
-    --border-width: 50% !important;
-    max-width: 245px;
-    font-style: normal;
-    color: var(--white);
-    font-family: var(--body-font);
-    font-weight: bold;
-    text-align: center;
-    margin: auto;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    display: flex;
-    justify-content: center;
-  }
+ion-button {
+  --background: var(--dark-blue);
+  --border-width: 50% !important;
+  max-width: 245px;
+  font-style: normal;
+  color: var(--white);
+  font-family: var(--body-font);
+  font-weight: bold;
+  text-align: center;
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+}
 
-  ion-input::before {
-    content: '';
-    position: absolute;
-    border-radius: 1rem;
-    width: 2px;
-    height: 37%;
-    top: 32%;
-    left: -5%;
-    background: var(--dark-blue);
-  }
+ion-input::before {
+  content: '';
+  position: absolute;
+  border-radius: 1rem;
+  width: 2px;
+  height: 37%;
+  top: 32%;
+  left: -5%;
+  background: var(--dark-blue);
+}
     
-  .img1 {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    font-family: var(--icon-font);
-    width: 90%;
-    height: 100%;
-    margin-top: 50px;
-    margin-bottom: 50px;
-  }
+.img1 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: var(--icon-font);
+  width: 90%;
+  height: 100%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
       
-  .h-green {
-    font-size: 30px !important;
-    font-family: var(--body-font);
-    margin-top: 40px;
-    margin-bottom: 0px;
-    color: var(--black-gray);
-    text-align: left;
-    font-weight: bold;
-    margin-left: 18px;
-  }
+.h-green {
+  font-size: 30px !important;
+  font-family: var(--body-font);
+  margin-top: 40px;
+  margin-bottom: 0px;
+  color: var(--black-gray);
+  text-align: left;
+  font-weight: bold;
+  margin-left: 18px;
+}
     
-  .wc-dark {
-    font-size: 30px !important;
-    font-family: var(--body-font);
-    margin-top: 0px;
-    margin-bottom: 40px;
-    color: var(--dark-blue);
-    text-align: left;
-    font-weight: bold;
-    margin-left: 18px;
-  }
+.wc-dark {
+  font-size: 30px !important;
+  font-family: var(--body-font);
+  margin-top: 0px;
+  margin-bottom: 40px;
+  color: var(--dark-blue);
+  text-align: left;
+  font-weight: bold;
+  margin-left: 18px;
+}
     
-  .h5 {
-    font-family: var(--body-font);
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 117.9%;
-    text-align: center;
-    color: var(--black-gray);
-    margin-top: 25px;
-  }
+.h5 {
+  font-family: var(--body-font);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 117.9%;
+  text-align: center;
+  color: var(--black-gray);
+  margin-top: 25px;
+}
     
-  .create-acc {
-    font-family: var(--body-font);
-    font-style: normal;
-    font-weight: bold;
-    font-size: 15px;
-    color: var(--dark-blue);
-    text-decoration: none;
-  }
-    
-  .error-message {
-    color: var(--ion-color-danger);
-    font-weight: 600;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    font-size: 13px;
-    margin-left: 25px;
-  }
-    
-  .error-message-spacer {
-    margin-bottom: 0;
-  }
+.create-acc {
+  font-family: var(--body-font);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  color: var(--dark-blue);
+  text-decoration: none;
+}
   
-  .card {
-    // position: fixed;
-    // position: relative;
-    //  bottom: 0 !important;
-    // margin-bottom: 0% !important;
-    width: 90%;
-    height: 100%;
-    background: var(--white);
-    border-radius: 1.5rem;
-    padding: 5px;
-    margin: auto;
-  }
+.error-message {
+  color: var(--ion-color-danger);
+  font-weight: 600;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 13px;
+  margin-left: 25px;
+}
+  
+.error-message-spacer {
+  margin-bottom: 0;
+}
+  
+.card {
+  // position: fixed;
+  // position: relative;
+  //  bottom: 0 !important;
+  // margin-bottom: 0% !important;
+  width: 90%;
+  height: 100%;
+  background: var(--white);
+  border-radius: 1.5rem;
+  padding: 5px;
+  margin: auto;
+}
 
-  p{
-    font-size: 0.8em;
-    text-align: center;
-    font-family: var(--body-font);
-    margin-top: 10%;
-  }
+p {
+  font-size: 0.8em;
+  text-align: center;
+  font-family: var(--body-font);
+  margin-top: 10%;
+}

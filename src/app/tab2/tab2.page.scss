@@ -20,12 +20,12 @@ ion-textarea {
   --placeholder-opacity: 70%;
   font-weight: normal;
   color: var(--black-gray) !important;
-  font-size: 13px;
+  font-size: 15px;
 
   ion-input {
     font-weight: normal;
     color: var(--black-gray);
-    font-size: 14px;
+    font-size: 15px;
   }
 }
 
@@ -53,7 +53,9 @@ ion-segment {
 p {
   font-weight: normal;
   color: var(--black-gray);
-  font-size: 13px;
+  font-size: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .back {
@@ -72,10 +74,10 @@ p {
 }
 
 ion-label {
-  padding: 0px 0;   
+  padding: 0px 0;
 }
 
-.h2{
+.h2 {
   font-family: var(--body-font);
   color: gray;
   font-weight: lighter;
@@ -85,7 +87,7 @@ ion-label {
   margin-left: -240%;
 }
 
-.h1{
+.h1 {
   font-family: var(--body-font);
   color: var(--blue-green-dark);
   font-weight: bold;
@@ -95,7 +97,7 @@ ion-label {
   margin-left: -240%;   
 }
 
-.icon-violet{
+.icon-violet {
   color: gray;
   font-size: 20px;
   margin-left: 5px;
@@ -103,7 +105,7 @@ ion-label {
   height: 100px;
 }
 
-.container{
+.container {
   --background-color: #D0DEEB  !important;
   padding: 0;
   margin: 14px 0;
@@ -128,7 +130,7 @@ ion-badge {
 
 .green-badge {
   color: #2b9e4e;
-  background: #5eff8e;
+  background: #a5e6b9;
   border: 1px solid #2b9e4e;
   font-family: var(--body-font);
   display: inline-block;
@@ -138,7 +140,7 @@ ion-badge {
 
 .red-badge {
   color: #bb1b30;
-  background: #f07485;
+  background: #faaab5;
   border: 1px solid #bb1b30;
   font-family: var(--body-font);
   display: inline-block;
@@ -276,7 +278,8 @@ ion-item {
   font-family: var(--body-font);
   color: rgb(80, 79, 79);
   font-weight: bold;
-  font-size: 13px; 
+  font-size: 15px;
+  padding-top: 10% !important;
 }
 
 /* FOR BUTTONS */
@@ -329,7 +332,7 @@ ion-img {
   font-size: 12px;
 }
 
-.btncom{
+.btncom {
   font-family: var(--body-font);
   --box-shadow: none !important;
   color: #ffffff;
@@ -521,7 +524,7 @@ hr {
 
 .checklist {
   color: var(--dark-blue) !important;
-  font-size: 12px;
+  font-size: 15px;
   font-weight: bold;
   margin-left: 0%;
   white-space: initial;
@@ -575,18 +578,18 @@ ion-card-title {
   font-size: 20px;
 }
 
-.title-checklist{
+.title-checklist {
   color: var(--black-gray);
 }
 
-.offer-bg{
+.offer-bg {
   background-color: var(--dark-blue);
   margin-left: 0%;
   margin-right: 0%;
   border-radius: 15px;
 }
 
-.offer-content{
+.offer-content {
   margin-top: 4%;
 }
 
@@ -623,7 +626,7 @@ ion-card-title {
 
 ion-list-header {
   font-weight: bold;
-  font-size: 17px;
+  font-size: 19px;
   color: var(--black-gray);
 }
 
@@ -762,7 +765,7 @@ ion-select::part(text) {
 ion-select::part(placeholder) {
   color: var(--dark-blue);
   font-weight: normal;
-  font-size: 14px;
+  font-size: 15px;
   opacity: 1;
 }
 
@@ -770,7 +773,7 @@ ion-select::part(placeholder) {
 ion-select::part(text) {
   color: #545ca7;
   font-weight: normal;
-  font-size: 14px;
+  font-size: 15px;
 }
 
 /* Set the icon color and opacity */
