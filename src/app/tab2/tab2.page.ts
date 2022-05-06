@@ -52,7 +52,7 @@ export class Tab2Page implements OnInit {
     private router: Router,
     public photoService: PhotoService, public actionSheetController: ActionSheetController) {
       this.id = this.actRoute.snapshot.paramMap.get('id');
-      this.db.getSong(this.id).then(res => {
+      this.db.getJob(this.id).then(res => {
         this.editForm.setValue({
            location_name: res['location_name'],
           // tasks_name: res['tasks_name'],
@@ -171,7 +171,7 @@ export class Tab2Page implements OnInit {
       fault_code:[''],
       customer_name:[''],
       position_name: ['']
-      // song_name: ['']
+      
     })
 
 
@@ -228,7 +228,7 @@ export class Tab2Page implements OnInit {
 
   //SQLITE
   saveForm(){
-    this.db.updateSong(this.id, this.editForm.value)
+    this.db.updateJob(this.id, this.editForm.value)
     .then( (res) => {
       console.log(res)
       this.successEditjobAlert();

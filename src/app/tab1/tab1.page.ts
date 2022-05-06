@@ -34,7 +34,7 @@ export class Tab1Page implements OnInit {
     ngOnInit() {
       this.db.dbState().subscribe((res) => {
         if(res){
-          this.db.fetchSongs().subscribe(item => {
+          this.db.fetchJobs().subscribe(item => {
             this.Data = item
           })
         }
@@ -51,7 +51,7 @@ export class Tab1Page implements OnInit {
       })
     }
     storeData() {
-      this.db.addSong(
+      this.db.addJob(
         this.mainForm.value.location,
         this.mainForm.value.task,
         this.mainForm.value.time,
@@ -64,10 +64,10 @@ export class Tab1Page implements OnInit {
         this.mainForm.reset();
       })
     }
-    deleteSong(id){
-      this.db.deleteSong(id).then(async(res) => {
+    deleteJob(id){
+      this.db.deleteJob(id).then(async(res) => {
         let toast = await this.toast.create({
-          message: 'Song deleted',
+          message: 'Job deleted',
           duration: 2500
         });
         toast.present();      

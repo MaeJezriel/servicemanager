@@ -10,7 +10,7 @@ import { SQLite, SQLiteObject } from '@ionic-native/sqlite/ngx';
 })
 export class DbService {
   private storage: SQLiteObject;
-  songsList = new BehaviorSubject([]);
+  jobsList = new BehaviorSubject([]);
   private isDbReady: BehaviorSubject<boolean> = new BehaviorSubject(false);
   constructor(
     private platform: Platform, 
@@ -33,8 +33,8 @@ export class DbService {
     return this.isDbReady.asObservable();
   }
 
-  fetchSongs(): Observable<Job[]> {
-    return this.songsList.asObservable();
+  fetchJobs(): Observable<Job[]> {
+    return this.jobsList.asObservable();
   }
     // Render fake data
     getFakeData() {
@@ -44,14 +44,14 @@ export class DbService {
       ).subscribe(data => {
         this.sqlPorter.importSqlToDb(this.storage, data)
           .then(_ => {
-            this.getSongs();
+            this.getJobs();
             this.isDbReady.next(true);
           })
           .catch(error => console.error(error));
       });
     }
   // Get list
-  getSongs(){
+  getJobs(){
     return this.storage.executeSql('SELECT * FROM jobtable', []).then(res => {
       let items: Job[] = [];
       if (res.rows.length > 0) {
@@ -72,20 +72,20 @@ export class DbService {
            });
         }
       }
-      this.songsList.next(items);
+      this.jobsList.next(items);
     });
   }
   // Add
-  addSong(location_name, tasks_name,time_name, site_equipment, problem_name, action_name, recommended_name, fault_code) {
+  addJob(location_name, tasks_name,time_name, site_equipment, problem_name, action_name, recommended_name, fault_code) {
     let data = [location_name, tasks_name, time_name, site_equipment, problem_name, action_name, recommended_name, fault_code];
     return this.storage.executeSql('INSERT INTO jobtable (location_name, tasks_name, time_name, site_equipment, problem_name, action_name, recommended_name, fault_code) VALUES (?, ?, ?, ?, ?, ?, ?, ?)', data)
     .then(res => {
-      this.getSongs();
+      this.getJobs();
     });
   }
  
   // Get single object
-  getSong(id): Promise<Job> {
+  getJob(id): Promise<Job> {
     return this.storage.executeSql('SELECT * FROM jobtable WHERE id = ?', [id]).then(res => { 
       return {
         id: res.rows.item(0).id,
@@ -104,18 +104,18 @@ export class DbService {
     });
   }
   // Update
-  updateSong(id, song: Job) {
-    let data = [song.site_equipment, song.location_name, song.service_request, song.problem_name, song.action_name, song.recommended_name, song.fault_code, song.customer_name, song.position_name];
+  updateJob(id, job: Job) {
+    let data = [job.site_equipment, job.location_name, job.service_request, job.problem_name, job.action_name, job.recommended_name, job.fault_code, job.customer_name, job.position_name];
     return this.storage.executeSql(`UPDATE jobtable SET site_equipment = ?, location_name = ?, service_request = ?, problem_name = ?, action_name = ?, recommended_name = ?, fault_code = ?, customer_name = ?, position_name = ? WHERE id = ${id}`, data)
     .then(data => {
-      this.getSongs();
+      this.getJobs();
     })
   }
   // Delete
-  deleteSong(id) {
+  deleteJob(id) {
     return this.storage.executeSql('DELETE FROM jobtable WHERE id = ?', [id])
     .then(_ => {
-      this.getSongs();
+      this.getJobs();
     });
   }
 }
